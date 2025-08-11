@@ -1,0 +1,167 @@
+input:not([type]),
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+
+#add_payment_method table.cart td.actions .coupon .input-text,
+.woocommerce-cart table.cart td.actions .coupon .input-text,
+.woocommerce-checkout table.cart td.actions .coupon .input-text{
+  color: var(--color__input-text);
+  border: 1px solid var(--color__input-border);
+  background-color: var(--color__input-background);
+  padding: 6px 15px;
+  outline: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    color: var(--color__input-text-focus);
+    border-color: var(--color__input-border-focus);
+    background-color: var(--color__input-background-focus);
+  }
+
+  @include font-family(
+    var(--font__field),
+    var(--font__field-weight),
+    var(--font__field-letter-spacing),
+    var(--font__field-text-transform),
+    var(--font__field-text-decoration),
+    var(--font__field-style),
+    var(--font__field-line-height),
+    var(--font__field-size-px),
+    var(--font__field-size-rem),
+  );
+  @include border-radius(3px);
+  @include transiton-builder(border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, width 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-size 0.3s ease-in-out, background-position 0.3s ease-in-out);
+}
+
+input::-moz-placeholder {
+  color: var(--color__input-text);
+  opacity: 1;
+  @include transiton-builder(border-color 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out);
+}
+
+input:-ms-input-placeholder {
+  color: var(--color__input-text);
+  opacity: 1;
+  @include transiton-builder(border-color 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out);
+}
+
+input::-webkit-input-placeholder {
+  color: var(--color__input-text);
+  opacity: 1;
+  @include transiton-builder(border-color 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out);
+}
+
+input:focus::-moz-placeholder {
+  color: var(--color__input-text-focus);
+  opacity: 1;
+}
+
+input:focus:-ms-input-placeholder {
+  color: var(--color__input-text-focus);
+  opacity: 1;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: var(--color__input-text-focus);
+  opacity: 1;
+}
+
+textarea::-moz-placeholder {
+  color: var(--color__input-text);
+  opacity: 1;
+  @include transiton-builder(border-color 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out);
+}
+
+textarea:-ms-input-placeholder {
+  color: var(--color__input-text);
+  opacity: 1;
+  @include transiton-builder(border-color 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out);
+}
+
+textarea::-webkit-input-placeholder {
+  color: var(--color__input-text);
+  opacity: 1;
+  @include transiton-builder(border-color 0.2s ease-in-out, color 0.2s ease-in-out, background-color 0.2s ease-in-out);
+}
+
+textarea:focus::-moz-placeholder {
+  color: var(--color__input-text-focus);
+  opacity: 1;
+}
+
+textarea:focus:-ms-input-placeholder {
+  color: var(--color__input-text-focus);
+  opacity: 1;
+}
+
+textarea:focus::-webkit-input-placeholder {
+  color: var(--color__input-text-focus);
+  opacity: 1;
+}
+
+input::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+select {
+  color: var(--color__input-text);
+  border: 1px solid var(--color__input-border);
+  background-color: var(--color__input-background);
+  padding: 8px 35px 8px 15px;
+  outline: none;
+  background:url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M5%206l5%205%205-5%202%201-7%207-7-7%202-1z%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E') no-repeat right 5px top 55%;
+  background-size: 15px 15px;
+  background-position: center right 12px;
+
+  @include prefixer(appearance, none, spec webkit moz);
+
+  &:focus {
+    color: var(--color__input-text-focus);
+    border-color: var(--color__input-border-focus);
+    background-color: var(--color__input-background-focus);
+  }
+
+  @include font-family(
+    var(--font__field),
+    var(--font__field-weight),
+    var(--font__field-letter-spacing),
+    var(--font__field-text-transform),
+    var(--font__field-text-decoration),
+    var(--font__field-style),
+    var(--font__field-line-height),
+    var(--font__field-size-px),
+    var(--font__field-size-rem),
+  );
+  @include border-radius(3px);
+  @include transiton-builder(border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, width 0.3s ease-in-out, box-shadow 0.3s ease-in-out);
+
+  option {
+    background-color: var(--color__select-background);
+  }
+
+  &[multiple]{
+    background:none;
+    padding: 8px 15px;
+  }
+}
+
+textarea {
+  width: 100%;
+}

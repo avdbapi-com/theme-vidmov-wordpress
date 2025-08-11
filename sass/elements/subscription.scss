@@ -1,0 +1,50 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.subscribe-button{
+  &.subscribe-loading{
+    opacity:0.5;
+    pointer-events:none;
+  }
+}
+
+.author-list-style{
+  .post-item-wrap{
+    padding: var(--layout_df-padding);
+    @media(max-width: 575px){
+      padding: var(--layout_df-padding-mobile);
+    }
+  }
+
+  .author-avatar-wrap{
+    padding:2px;
+    overflow:hidden;
+    width:69px;
+    height:69px;
+    &:not(:last-child){
+      margin-bottom:15px;
+    }
+    border:2px solid var(--color__single-author-avatar-border);
+    @include border-radius(50%);
+  }
+
+  .author-avatar{
+    display:block;
+    @include border-radius(50%);
+  }
+
+  .author-avatar-name-wrap{
+    margin:0;
+    width:100%;
+    text-align:center;
+  }
+
+  .author-subscribe{
+    &:not(:first-child){
+      margin-top:15px;
+    }
+    &:not(:last-child){
+      margin-bottom:15px;
+    }
+  }
+}

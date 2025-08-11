@@ -1,0 +1,286 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+:root {
+  --height__h-leilani-top-menu-height: 260px;
+  --height__h-leilani-main-menu-height: 66px;
+  --height__h-leilani-top-menu-height-mobile: 56px;
+  --height__h-leilani-main-menu-height-mobile: 56px;
+
+  --color__h-leilani-top-menu-background: #FFFFFF;
+  --color__h-leilani-top-menu-border: #F0F2F5;
+  --color__h-leilani-main-menu-background: #FFFFFF;
+  --color__h-leilani-main-menu-border: #F0F2F5;
+}
+
+.beeteam368-top-menu {
+  @include prefixer(box-shadow, 0px 1px 8px 1px var(--color__global-box-shadow), spec webkit);
+  background-color: var(--color__h-leilani-top-menu-background);
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+
+.beeteam368-top-menu-row {
+  min-height: var(--height__h-leilani-top-menu-height);
+
+  .beeteam368-search-suggestions {
+    padding-top: 4.5rem;
+  }
+}
+
+.beeteam368-main-menu {
+  border-bottom: 1px solid var(--color__h-leilani-main-menu-border);
+  background-color: var(--color__h-leilani-main-menu-background);
+  z-index: 10;
+  width: 100%;
+  position: relative;
+}
+
+.beeteam368-main-menu-row {
+  min-height: var(--height__h-leilani-main-menu-height);
+}
+
+.side-close-btn {
+  min-height: var(--height__h-leilani-main-menu-height);
+}
+
+.beeteam368-searchbox {
+  //custom position search box wrap
+  .beeteam368-searchbox-wrap {
+    .beeteam368-searchform {
+      max-width: 700px;
+    }
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .beeteam368-searchtext {
+      @media(max-width: 575px) {
+        & ~ .beeteam368-search-suggestions {
+          @include border-radius(0);
+        }
+        &:focus {
+          width: calc(100% + 0px);
+
+          & ~ .beetam368-back-focus {
+            left: 0;
+          }
+
+          & ~ .beeteam368-search-suggestions {
+            left: calc(var(--grid_gutter_df) / 2 * -1);
+            right: calc(var(--grid_gutter_df) / 2 * -1);
+          }
+        }
+      }
+    }
+  }
+
+  //custom position search box wrap
+}
+
+.beeteam368-h-leilani {
+  .beeteam368-main-nav {
+    min-height: var(--height__h-leilani-main-menu-height);
+    @media(max-width: 991px) {
+      min-height: var(--height__h-leilani-main-menu-height-mobile);
+    }
+    @media(min-width: 992px) {
+      > ul > li > a {
+        min-height: var(--height__h-leilani-main-menu-height);
+      }
+    }
+  }
+}
+
+@media(min-width: 992px) {
+  .beeteam368-top-menu {
+    background-color: transparent;
+    @include prefixer(box-shadow, none, spec webkit);
+  }
+
+  .beeteam368-main-menu {
+    border-bottom: none;
+    @include prefixer(box-shadow, 0px 1px 8px 1px var(--color__global-box-shadow), spec webkit);
+  }
+
+  .beeteam368-top-menu-row {
+    padding-top: 5px;
+
+    .oc-btn,
+    .oc-mb-mn-btn {
+      .bar {
+        background-color: #FFFFFF;
+      }
+
+      &:hover {
+        .bar {
+          background-color: #FFFFFF;
+        }
+      }
+
+      &:active {
+        &:before {
+          background-color: rgba(255, 255, 255, 0.58);
+        }
+      }
+    }
+  }
+
+  .beeteam368-sidemenu-btn {
+    order: 2;
+  }
+
+  .beeteam368-social-account {
+    order: 3
+  }
+
+  .beeteam368-social-account-sub-login-nav {
+    order: 4;
+  }
+
+  .beeteam368-h-leilani {
+
+    .beeteam368-searchbox {
+      order: 1;
+      width: 100% !important;
+      margin-bottom: 30px;
+    }
+
+    .beeteam368-searchtext {
+      border-color: transparent;
+    }
+
+    .beeteam368-top-menu {
+
+      position: relative;
+
+      .site__container {
+        position: relative;
+        z-index: 1;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #191A1D;
+        //background-image: url('images/leilani-bg.jpg');
+        background-size: cover;
+        background-position: center center;
+        z-index: 0;
+      }
+
+      /*
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        background: rgba(26, 26, 26, 0.8);
+        background: -moz-linear-gradient(90deg, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(26, 26, 26, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(26, 26, 26, 1) 100%);
+        background: linear-gradient(90deg, rgba(26, 26, 26, 1) 0%, rgba(26, 26, 26, 0.5) 50%, rgba(26, 26, 26, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a1a1a", endColorstr="#1a1a1a", GradientType=1);
+      }
+      */
+
+    }
+  }
+}
+
+@media(min-width: 992px){
+  .beeteam368-social-account{
+    .beeteam368-icon-dropdown{
+      right:auto;
+      left:50%;
+      @include prefixer(transform, translate(-50%, -10px), spec webkit ms);
+
+      &:before{
+        right:auto;
+        left:50%;
+        margin-left:-8px;
+      }
+    }
+
+    .beeteam368-dropdown-items{
+      &.active-item{
+        .beeteam368-icon-dropdown{
+          @include prefixer(transform, translate(-50%, 0), spec webkit ms);
+        }
+      }
+    }
+  }
+}
+
+//*mobile
+@media(min-width: 992px) {
+  .beeteam368-social-account-sub-nav {
+    display: none;
+  }
+  .beeteam368-logo-mobile {
+    display: none;
+  }
+}
+
+@media(max-width: 991px) {
+
+  .side-menu-mode.sidemenu-right{
+    .beeteam368-searchbox{
+      order:1;
+    }
+    .beeteam368-mobile-menu-btn{
+      order:2;
+    }
+    .beeteam368-logo-mobile{
+      order:1;
+    }
+    .beeteam368-social-account-sub-nav,
+    .beeteam368-social-account-sub-login-nav{
+      order:0;
+    }
+  }
+
+  .beeteam368-searchbox {
+    @include prefixer(flex, 1, spec webkit ms);
+  }
+
+  .beeteam368-top-menu-row {
+    min-height: var(--height__h-leilani-top-menu-height-mobile);
+  }
+
+  .beeteam368-main-menu-row,
+  .side-close-btn {
+    min-height: var(--height__h-leilani-main-menu-height-mobile);
+
+    .beeteam368-main-nav {
+      @include prefixer(flex, 0, spec webkit ms);
+      padding: 0;
+    }
+
+    .beeteam368-logo {
+      display: none;
+    }
+
+    .beeteam368-logo-mobile {
+      @include prefixer(flex, 1, spec webkit ms);
+    }
+  }
+
+  .beeteam368-social-account {
+    .beeteam368-dark-light-btn {
+      display: none;
+    }
+  }
+}
+
+@include mobileMenuOpen('--height__top-bar', '--color__h-leilani-main-menu-border', '--height__h-all-main-menu-height-open-mobile');
+//*mobile

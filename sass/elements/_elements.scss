@@ -1,0 +1,110 @@
+*,
+*:before,
+*:after {
+  @include prefixer(box-sizing, border-box, spec webkit moz ms);
+}
+
+html {
+  overflow: visible;
+  overflow-y: scroll;
+
+  &.mobile-active {
+    @media(max-width: 991px) {
+      overflow: hidden;
+    }
+  }
+}
+
+body {
+  background-color: var(--color__body-background);
+  overflow: hidden;
+}
+
+#beeteam368-site-wrap-parent {
+  background-color: var(--color__wrap-background);
+}
+
+@import "loading";
+@import "site-logo";
+@import "icon";
+@import "searchbox";
+@import "dark-light-btn";
+@import "lists";
+@import "tables";
+@import "overlay-scrollbars";
+@import "footer-css";
+
+hr {
+  background-color: var(--color__hr-background);
+  border: 0;
+  height: 1px;
+  margin: 2.1em 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 2.1em 0;
+}
+
+body {
+  .select2-container{
+    z-index:999999;
+  }
+
+  .select2-dropdown{
+    background: var(--color__global-popup-background);
+    border-color: var(--color__input-border);
+  }
+
+  .select2-container--default .select2-selection--multiple,
+  .select2-container--default.select2-container--focus .select2-selection--multiple{
+    padding: 5px 15px;
+    line-height:1;
+    color: var(--color__input-text);
+    border: 1px solid var(--color__input-border);
+    background-color: var(--color__input-background);
+    @include border-radius(3px);
+  }
+
+  .select2-container--default .select2-selection--multiple .select2-selection__rendered{
+    padding:0;
+    display:block;
+    margin:0 -5px;
+    width:auto;
+  }
+
+  .select2-container .select2-search--inline .select2-search__field{
+    margin:0;
+    width:100% !important;
+  }
+
+  .select2-container--open .select2-dropdown--below{
+    margin-top:-1px;
+  }
+
+  body.admin-bar .select2-container--open .select2-dropdown--below{
+    margin-top:31px;
+  }
+
+  .select2-container--default .select2-selection--multiple .select2-selection__choice{
+    padding: 4px 8px;
+    line-height: 1;
+    margin: 5px;
+    color: var(--color__icon);
+    background-color: var(--color__icon-background);
+    border-color: var(--color__icon-background);
+  }
+
+  .select2-container--default .select2-results__option[aria-selected=true]{
+    color: var(--color__icon);
+    background-color: var(--color__icon-background);
+  }
+
+  div.mce-inline-toolbar-grp{
+    z-index:999999;
+  }
+}

@@ -1,0 +1,117 @@
+html {
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+
+  @include font-family(
+    var(--font__main),
+    var(--font__main-weight),
+    var(--font__main-letter-spacing),
+    var(--font__main-text-transform),
+    var(--font__main-text-decoration),
+    var(--font__main-style),
+    var(--font__main-line-height),
+    var(--font__main-size-px),
+    var(--font__main-size-rem)
+  );
+
+  color: var(--color__text-main);
+}
+
+.font-main {
+  @include font-family(
+    var(--font__main),
+    var(--font__main-weight),
+    var(--font__main-letter-spacing),
+    var(--font__main-text-transform),
+    var(--font__main-text-decoration),
+    var(--font__main-style),
+    var(--font__main-line-height),
+    var(--font__main-size-px),
+    var(--font__main-size-rem)
+  );
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-size-8 {
+  font-size: var(--font__main-size-8-px);
+  font-size: var(--font__main-size-8-rem);
+}
+
+.font-size-10 {
+  font-size: var(--font__main-size-10-px);
+  font-size: var(--font__main-size-10-rem);
+}
+
+.font-size-12 {
+  font-size: var(--font__main-size-12-px);
+  font-size: var(--font__main-size-12-rem);
+}
+
+.font-size-16 {
+  font-size: var(--font__main-size-16-px);
+  font-size: var(--font__main-size-16-rem);
+}
+
+.font-size-20 {
+  font-size: var(--font__main-size-20-px);
+  font-size: var(--font__main-size-20-rem);
+}
+
+.font-size-12-mobile {
+  @media(max-width: 767px){
+    font-size: var(--font__main-size-12-px);
+    font-size: var(--font__main-size-12-rem);
+  }
+}
+
+.max-2lines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.max-1line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+@import "headings";
+@import "nav";
+
+.font-meta {
+  @include font-family(
+    var(--font__meta),
+    var(--font__meta-weight),
+    var(--font__meta-letter-spacing),
+    var(--font__meta-text-transform),
+    var(--font__meta-text-decoration),
+    var(--font__meta-style),
+    var(--font__meta-line-height),
+    var(--font__meta-size-px),
+    var(--font__meta-size-rem)
+  );
+}
+
+.font-meta-size-12 {
+  font-size: var(--font__meta-size-12-px);
+  font-size: var(--font__meta-size-12-rem);
+}
+
+.font-meta-size-10 {
+  font-size: var(--font__meta-size-10-px);
+  font-size: var(--font__meta-size-10-rem);
+}
+
+@import "copy";

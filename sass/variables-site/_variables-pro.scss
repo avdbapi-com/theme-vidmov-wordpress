@@ -1,0 +1,314 @@
+:root {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+
+  //*container
+  --grid_gutter_df: #{$grid_gutter_df};
+  --grid_gutter_sm: #{$grid_gutter_sm};
+  --grid_gutter_md: #{$grid_gutter_md};
+  --grid_gutter_lg: #{$grid_gutter_lg};
+  --grid_gutter_xl: #{$grid_gutter_xl};
+  --grid_gutter_xxl: #{$grid_gutter_xxl};
+  --grid_gutter_wrap_sidebar: #{$grid_gutter_wrap_sidebar};
+  //*container
+
+  //*main font
+  --font__main: #{$font__main};
+  --font__main-weight: #{$font__main-weight};
+  --font__main-letter-spacing: #{$font__main-letter-spacing};
+  --font__main-text-transform: #{$font__main-text-transform};
+  --font__main-text-decoration: #{$font__main-text-decoration};
+  --font__main-style: #{$font__main-style};
+  --font__main-line-height: #{$font__main-line-height};
+  --font__main-size-px: #{font-size-px($font__main-size)};
+  --font__main-size-rem: #{font-size-rem($font__main-size)};
+
+  --font__main-size-8-px: #{font-size-px(0.5)};
+  --font__main-size-8-rem: #{font-size-rem(0.5)};
+
+  --font__main-size-10-px: #{font-size-px(0.625)};
+  --font__main-size-10-rem: #{font-size-rem(0.625)};
+
+  --font__main-size-12-px: #{font-size-px(0.75)};
+  --font__main-size-12-rem: #{font-size-rem(0.75)};
+
+  --font__main-size-16-px: #{font-size-px(1)};
+  --font__main-size-16-rem: #{font-size-rem(1)};
+
+  --font__main-size-20-px: #{font-size-px(1.25)};
+  --font__main-size-20-rem: #{font-size-rem(1.25)};
+  //*main font
+
+  //*heading font
+  --font__heading: #{$font__heading};
+  --font__heading-weight: #{$font__heading-weight};
+  --font__heading-letter-spacing: #{$font__heading-letter-spacing};
+  --font__heading-text-transform: #{$font__heading-text-transform};
+  --font__heading-text-decoration: #{$font__heading-text-decoration};
+  --font__heading-style: #{$font__heading-style};
+  --font__heading-line-height: #{$font__heading-line-height};
+  --font__heading-size-px: #{font-size-px($font__heading-size)};
+  --font__heading-size-rem: #{font-size-rem($font__heading-size)};
+
+  --font__h1-font-size-px: #{font-size-px($font__h1-font-size)};
+  --font__h2-font-size-px: #{font-size-px($font__h2-font-size)};
+  --font__h3-font-size-px: #{font-size-px($font__h3-font-size)};
+  --font__h4-font-size-px: #{font-size-px($font__h4-font-size)};
+  --font__h5-font-size-px: #{font-size-px($font__h5-font-size)};
+  --font__h6-font-size-px: #{font-size-px($font__h6-font-size)};
+
+  --font__h1-font-size-rem: #{font-size-rem($font__h1-font-size)};
+  --font__h2-font-size-rem: #{font-size-rem($font__h2-font-size)};
+  --font__h3-font-size-rem: #{font-size-rem($font__h3-font-size)};
+  --font__h4-font-size-rem: #{font-size-rem($font__h4-font-size)};
+  --font__h5-font-size-rem: #{font-size-rem($font__h5-font-size)};
+  --font__h6-font-size-rem: #{font-size-rem($font__h6-font-size)};
+
+  --font__h7-font-size-px: #{font-size-px(0.75)};
+  --font__h7-font-size-rem: #{font-size-rem(0.75)};
+
+  --font__h1-single-size-px: #{font-size-px(2.375)};
+  --font__h1-single-size-rem: #{font-size-rem(2.375)};
+  //*heading font
+
+  //*navigation font
+  --font__nav: #{$font__nav};
+  --font__nav-weight: #{$font__nav-weight};
+  --font__nav-letter-spacing: #{$font__nav-letter-spacing};
+  --font__nav-text-transform: #{$font__nav-text-transform};
+  --font__nav-text-decoration: #{$font__nav-text-decoration};
+  --font__nav-style: #{$font__nav-style};
+  --font__nav-line-height: #{$font__nav-line-height};
+  --font__nav-size-px: #{font-size-px($font__nav-size)};
+  --font__nav-size-rem: #{font-size-rem($font__nav-size)};
+
+  --font__nav-size-18-px: #{font-size-px(1.125)};
+  --font__nav-size-18-rem: #{font-size-rem(1.125)};
+
+  --font__nav-size-14-px: #{font-size-px(0.875)};
+  --font__nav-size-14-rem: #{font-size-rem(0.875)};
+
+  --font__nav-size-13-px: #{font-size-px(0.8125)};
+  --font__nav-size-13-rem: #{font-size-rem(0.8125)};
+
+  --font__nav-size-12-px: #{font-size-px(0.75)};
+  --font__nav-size-12-rem: #{font-size-rem(0.75)};
+  //*navigation font
+
+  //*button font
+  --font__button: #{$font__button};
+  --font__button-weight: #{$font__button-weight};
+  --font__button-letter-spacing: #{$font__button-letter-spacing};
+  --font__button-text-transform: #{$font__button-text-transform};
+  --font__button-text-decoration: #{$font__button-text-decoration};
+  --font__button-style: #{$font__button-style};
+  --font__button-line-height: #{$font__button-line-height};
+  --font__button-size-px: #{font-size-px($font__button-size)};
+  --font__button-size-rem: #{font-size-rem($font__button-size)};
+
+  --font__button-size-12-px: #{font-size-px(0.75)};
+  --font__button-size-12-rem: #{font-size-rem(0.75)};
+  //*button font
+
+  //*field font
+  --font__field: #{$font__field};
+  --font__field-weight: #{$font__field-weight};
+  --font__field-letter-spacing: #{$font__field-letter-spacing};
+  --font__field-text-transform: #{$font__field-text-transform};
+  --font__field-text-decoration: #{$font__field-text-decoration};
+  --font__field-style: #{$font__field-style};
+  --font__field-line-height: #{$font__field-line-height};
+  --font__field-size-px: #{font-size-px($font__field-size)};
+  --font__field-size-rem: #{font-size-rem($font__field-size)};
+  //*field font
+
+  //*meta font
+  --font__meta: #{$font__meta};
+  --font__meta-weight: #{$font__meta-weight};
+  --font__meta-letter-spacing: #{$font__meta-letter-spacing};
+  --font__meta-text-transform: #{$font__meta-text-transform};
+  --font__meta-text-decoration: #{$font__meta-text-decoration};
+  --font__meta-style: #{$font__meta-style};
+  --font__meta-line-height: #{$font__meta-line-height};
+  --font__meta-size-px: #{font-size-px($font__meta-size)};
+  --font__meta-size-rem: #{font-size-rem($font__meta-size)};
+
+  --font__meta-size-12-px: #{font-size-px(0.75)};
+  --font__meta-size-12-rem: #{font-size-rem(0.75)};
+
+  --font__meta-size-10-px: #{font-size-px(0.625)};
+  --font__meta-size-10-rem: #{font-size-rem(0.625)};
+  //*meta font
+
+  //*code font
+  --font__code: #{$font__code};
+  //*code font
+
+  //*pre font
+  --font__pre: #{$font__pre};
+  //*pre font
+
+  //*icon
+  --height__sub-icons-mobile: 56px;
+  //*icon
+
+  //*Header MainMenu Mobile Open
+  --height__h-all-main-menu-height-open-mobile: 70px;
+  //*Header MainMenu Mobile Open
+
+  //*nav default
+  --nav__range--desktop: 18px;
+  --nav__range--mobile: 10px;
+  //*nav default
+
+  //*top Colorbar
+  --height__top-bar: 0.1875rem;
+  //*top Colorbar
+
+  //*------------COLOR---------------
+
+  //*------------COLOR---------------
+
+  --color__body-background: #F0F2F5B8;
+  --color__wrap-background: transparent;
+  --color__main: #{$color__main};
+  --color__sub: #{$color__sub};
+  --color__text-main: #383838;
+  --color__text-heading: #1C1C1E;
+  --color__global-box-shadow: rgba(28, 45, 66, 0.088);
+  --color__global-box-content-shadow: rgba(28,28,30,0.06);
+
+  //*logo
+  --color__site-logo: #{$color__main};
+  //*logo
+
+  //*link
+  --color__link: #{$color__main};
+  --color__link-visited: #{$color__main};
+  --color__link-hover: #{$color__main};
+
+  --color__title-link: #1C1C1E;
+  --color__title-link-hover: #{$color__main};
+  //*link
+
+  //*button color
+  --color__button-background: #{$color__main};
+  --color__button-text: #FFFFFF;
+  --color__button-border: #{$color__main};
+  --color__button-background-hover: #3C3F46;
+  --color__button-text-hover: #FFFFFF;
+  --color__button-border-hover: #3C3F46;
+
+  --color__button-background-reverse: #8A8A8A;
+  --color__button-text-reverse: #FFFFFF;
+  --color__button-border-reverse: #8A8A8A;
+  //*button color
+
+  //*field color
+  --color__input-border: #65676B;
+  --color__input-text: #383838;
+  --color__input-background: transparent;
+  --color__input-border-focus: #{$color__main};
+  --color__input-text-focus: #383838;
+  --color__input-background-focus: transparent;
+
+  --color__select-background: #FFFFFF;
+  //*field color
+
+  //*pre color
+  --color__background-pre: #F0F2F5;
+  //*pre color
+
+  //*hr color
+  --color__hr-background: #E9ECF1;
+  //*hr color
+
+  //*abbr color
+  --color__abbr-border: #666666;
+  //*abbr color
+
+  //*ins color
+  --color__ins-background: #F0F2F5;
+  //*ins color
+
+  //*searchbox
+  --color__searchbox: #65676B;
+  --color__searchbox-background: #FFFFFF;
+  --color__searchbox-placeholder: #65676B;
+  --color__searchbox-border: #65676B;
+  --color__searchbox-box-shadow: transparent;
+  --color__searchbox-hover: #{$color__main};
+  --color__searchbox-background-hover: #FFFFFF;
+  --color__searchbox-placeholder-hover: #{$color__main};
+  --color__searchbox-border-hover: #{$color__main};
+
+  --color__suggestions-background: #FFFFFF;
+  --color__suggestion-item-hover: #F0F2F5;
+  --color__suggestion-item-highlighted: #{$color__main};
+  //*searchbox
+
+  //*close open menu
+  --color__oc-button: #383838;
+  --color__oc-button-hover: #1C1C1E;
+  --color__oc-button-click: #D8DADF;
+
+  --color__oc-button-mobile-background: #FFFFFF;
+  //*close open menu
+
+  //*icon
+  --color__icon: #1C1C1E;
+  --color__icon-background: #F0F2F5;
+  --color__icon-hover: #383838;
+  --color__icon-background-hover: #D8DADF;
+
+  --color__icon-primary: #FFFFFF;
+  --color__icon-primary-background: #{$color__main};
+  --color__icon-primary-hover: #1C1C1E;
+  --color__icon-primary-background-hover: #D8DADF;
+
+  --color__dark-light-btn-dark: #FFFFFF;
+  --color__dark-light-btn-dark-background: #1C1C1E;
+
+  --color__prev-next-btn: rgba(0, 0, 0, 0.3);
+  --color__prev-next-btn-hover: #1C1C1E;
+  //*icon
+
+  --color__sub-icons-background: #FFFFFF;
+  --color__sub-icons-border: rgba(28, 45, 66, 0.088);
+
+  //*nav default
+  --color__nav-level1-text: #1C1C1E;
+  --color__nav-level1-text-hover: #{$color__main};
+  --color__nav-level1-text-active: #{$color__main};
+  --color__nav-level-x-background: #FFFFFF;
+  --color__nav-level-x-text: #383838;
+  --color__nav-level-x-text-hover: #{$color__main};
+  --color__nav-level-x-text-active: #{$color__main};
+  --color__nav-line-hover: #{$color__main};
+  --color__nav-line-active: #{$color__main};
+  --color__nav-arrow: #D8DADF;
+  --color__nav-arrow-hover: #{$color__main};
+  --color__nav-arrow-active: #{$color__main};
+  //*nav default
+
+  //*Megamenu default
+  --color__megamenu-nav: #1C1C1E;
+  --color__megamenu-nav-background: #F0F2F5;
+  --color__megamenu-nav-hover: #FFFFFF;
+  --color__megamenu-nav-background-hover: #{$color__main};//#383838;
+  //*Megamenu default
+
+  //*loading
+  --color__loading-1: #4285F4;
+  --color__loading-2: #34A853;
+  --color__loading-3: #{$color__main};
+  --color__loading-4: #FBBC05;
+  --color__loading-5: #AAAAAA;
+  --color__loading-6: #AAAAAA;
+  --color__loading-7: #E8EBEF;
+  //*loading
+
+  //*top Colorbar
+  --color__top-bar: linear-gradient(to right, #73D2F6, #08C 22%, #7FC400 36%, #FFD583 48%, #FFB21E 63%, #FF4D4D 76%, #503873);
+  --color__top-bar-webkit: -webkit-linear-gradient(left, #73D2F6, #08C 22%, #7FC400 36%, #FFD583 48%, #FFB21E 63%, #FF4D4D 76%, #503873);
+  //*top Colorbar
+}

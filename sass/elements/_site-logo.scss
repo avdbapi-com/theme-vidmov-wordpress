@@ -1,0 +1,22 @@
+.beeteam368-logo-img {
+  display: block;
+}
+
+.beeteam368-logo-wrap {
+  line-height: 0;
+  text-align: center;
+}
+
+.beeteam368-logo-link {
+  display: inline-block;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  margin:0;
+  color: var(--color__site-logo);
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited{
+    color: var(--color__site-logo);
+  }
+}

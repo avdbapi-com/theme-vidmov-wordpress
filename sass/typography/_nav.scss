@@ -1,0 +1,18 @@
+.nav-font {
+  @include font-family(
+    var(--font__nav),
+    var(--font__nav-weight),
+    var(--font__nav-letter-spacing),
+    var(--font__nav-text-transform),
+    var(--font__nav-text-decoration),
+    var(--font__nav-style),
+    var(--font__nav-line-height),
+    var(--font__nav-size-px),
+    var(--font__nav-size-rem)
+  );
+}
+
+.nav-font-size-13 {
+  font-size: var(--font__nav-size-13-px);
+  font-size: var(--font__nav-size-13-rem);
+}

@@ -1,0 +1,43 @@
+/*CSS Map*/
+
+/* /style.scss -> /style.css*/
+/* /footer-css.scss -> /footer.css*/
+/* /rtl.scss -> /rtl.css*/
+/* /header/h-alyssa.scss -> /css/header/h-alyssa.css*/
+/* /header/h-default.scss -> /css/header/h-default.css*/
+/* /header/h-leilani.scss -> /css/header/h-leilani.css*/
+/* /header/h-lily.scss -> /css/header/h-lily.css*/
+/* /header/h-marguerite.scss -> /css/header/h-marguerite.css*/
+/* /header/h-rose.scss -> /css/header/h-rose.css*/
+/* /header/h-poppy.scss -> /css/header/h-poppy.css*/
+/* /header/mega-menu/mega-menu.scss -> /css/header/mega-menu/mega-menu.css*/
+/* /side-menu/side-menu.scss -> /css/side-menu/side-menu.css*/
+/* /dark-version/dark-version.scss -> /dark-version.css*/
+
+/* /elements/reactions.scss -> \plugins\beeteam368-extensions\inc\like-dislike\assets\reactions.css*/
+/* /site/primary/elementor/block.scss -> \plugins\beeteam368-extensions\elementor\assets\block\block.css*/
+/* /site/primary/elementor/slider.scss -> \plugins\beeteam368-extensions\elementor\assets\slider\slider.css*/
+/* /element/player.scss -> \plugins\beeteam368-extensions\inc\video\assets\player.css*/
+/* /element/player-audio.scss -> \plugins\beeteam368-extensions\inc\audio\assets\player.css*/
+/* /element/review.scss -> \plugins\beeteam368-extensions\inc\review\assets\review.css*/
+/* /element/channel.scss -> \plugins\beeteam368-extensions\inc\channel\assets\channel.css*/
+/* /element/watch-later.scss -> \plugins\beeteam368-extensions\inc\watch-later\assets\watch-later.css*/
+/* /element/report.scss -> \plugins\beeteam368-extensions\inc\report\assets\report.css*/
+/* /element/playlist.scss -> \plugins\beeteam368-extensions\inc\playlist\assets\playlist.css*/
+/* /element/series.scss -> \plugins\beeteam368-extensions\inc\series\assets\series.css*/
+/* /element/cast-variant.scss -> \plugins\beeteam368-extensions\inc\cast\assets\cast-variant.css*/
+
+/* /site/primary/elementor/slider-pro.scss -> \plugins\beeteam368-extensions-pro\elementor\assets\slider-pro\slider-pro.css*/
+/* /element/subscription.scss -> \plugins\beeteam368-extensions-pro\inc\subscription\assets\subscription.css*/
+/* /element/login-register.scss -> \plugins\beeteam368-extensions-pro\inc\login-register\assets\login-register.css*/
+/* /element/myCred-transfer.scss -> \plugins\beeteam368-extensions-pro\inc\virtual-gifts\assets\myCred-transfer.css*/
+/* /element/buycred.scss -> \plugins\beeteam368-extensions-pro\inc\buycred\assets\buycred.css*/
+/* /element/trending.scss -> \plugins\beeteam368-extensions-pro\inc\trending\assets\trending.css*/
+/* /element/playlist-submit.scss -> \plugins\beeteam368-extensions-pro\inc\user-submit-post\assets\playlist-submit.css*/
+/* /element/mycred-sell-content.scss -> \plugins\beeteam368-extensions-pro\inc\mycred-sell-content\assets\mycred-sell-content.css*/
+/* /element/time-stamp.scss -> \plugins\beeteam368-extensions-pro\inc\pro-player\assets\time-stamp.css*/
+/* /element/post-submit.scss -> \plugins\beeteam368-extensions-pro\inc\user-submit-post\assets\post-submit.css*/
+/* /element/membership.scss -> \plugins\beeteam368-extensions-pro\inc\membership\assets\membership.css*/
+/* /element/www.scss -> \plugins\beeteam368-extensions-pro\inc\woocommerce\assets\woo.css*/
+
+/*CSS Map*/

@@ -1,0 +1,126 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+:root{
+  --color__reactions-icon: #FFFFFF;
+  --color__reactions-icon-bg: #999999;
+  --color__reactions-icon-border: #FFFFFF;
+  --color__reactions-like-bg: rgba(255, 55, 95, 1.0);
+  --color__reactions-dislike-like-bg: rgba(10, 132, 255, 1.0);
+  --color__reactions-squint-tears-like-bg: rgba(191, 90, 242, 1.0);
+  --color__reactions-cry-bg: rgba(255, 159, 10, 1.0);
+  --color__button-listing-reactions:#FFFFFF;
+
+  --color__reactions-already-voted: #0A0A0A;
+
+}
+
+.post-lt-reactions{
+  position:relative;
+  cursor: pointer;
+
+  &.loading-voting{
+    pointer-events:none;
+    .button-listing-reactions > *{
+      opacity:0.5;
+    }
+  }
+
+  .reaction-item{
+
+    color: var(--color__reactions-icon);
+    background-color:var(--color__reactions-icon-bg);
+
+    &.like-reaction{
+      background-color: var(--color__reactions-like-bg);
+    }
+
+    &.dislike-reaction{
+      background-color: var(--color__reactions-dislike-like-bg);
+    }
+
+    &.squint_tears-reaction{
+      background-color: var(--color__reactions-squint-tears-like-bg);
+    }
+
+    &.cry-reaction{
+      background-color: var(--color__reactions-cry-bg);
+    }
+  }
+
+  .beeteam368-icon-item{
+    border:2px solid var(--color__reactions-icon-border);
+    line-height: 23px;
+
+    &:first-child{
+      margin-left:-2px;
+    }
+    &:not(:first-child){
+      margin-left:-8px;
+    }
+
+    &+.item-number,
+    &+.item-text{
+      margin-left:3px;
+    }
+  }
+
+  .button-listing-reactions{
+    position:absolute;
+    height:46px;
+    left:0;
+    bottom:100%;
+    margin-bottom:10px;
+    padding:8px;
+    display:none;
+
+    background-color: var(--color__button-listing-reactions);
+    @include border-radius(8px);
+    @include prefixer(box-shadow, 0px 1px 8px 1px var(--color__global-box-shadow), spec webkit);
+  }
+
+  .beeteam368-reaction-vt{
+    width:30px;
+    height:30px;
+    text-align:center;
+    line-height:30px;
+    font-size:14px;
+    margin-right:5px;
+    display:inline-block;
+    position:relative;
+    @include border-radius(5px);
+
+    &:last-child{
+      margin-right:0;
+    }
+
+    &.already-voted{
+      position:relative;
+      background-color: var(--color__reactions-already-voted);
+
+      &:before,
+      &:after{
+        content:'';
+        display:block;
+        position:absolute;
+        width:31px;
+        height:1px;
+        top:14px;
+        left:0;
+        background-color: var(--color__reactions-icon);
+        @include prefixer(transform, rotate(45deg), spec webkit);
+      }
+
+      &:after{
+        @include prefixer(transform, rotate(-45deg), spec webkit);
+      }
+    }
+  }
+
+  &.active-panel{
+    .button-listing-reactions{
+      display:block;
+      white-space:nowrap;
+    }
+  }
+}

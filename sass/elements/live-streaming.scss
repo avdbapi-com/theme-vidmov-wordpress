@@ -1,0 +1,343 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.beeteam368-global-popup.beeteam368-create-live-popup{
+  .beeteam368-global-popup-content{
+    width:888px;
+
+    .loading-container{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+      z-index:2;
+    }
+
+    &.active-loading{
+      .loading-container{
+        opacity:1;
+        visibility:visible;
+      }
+
+      .beeteam368-create-live-wrapper{
+        opacity:0.368;
+        pointer-events:none !important;
+        *{
+          pointer-events:none !important;
+        }
+      }
+    }
+  }
+}
+
+.beeteam368-create-live-wrapper{
+
+  min-height:calc(100vh - 368px);
+  max-height:calc(100vh - 290px);
+
+  padding-left:40px;
+  margin-left:-40px;
+
+  padding-right:40px;
+  margin-right:-40px;
+
+  @media(max-width: 575px){
+    padding-left: var(--layout_df-padding-mobile);
+    margin-left: calc(-1 * var(--layout_df-padding-mobile));
+
+    padding-right: var(--layout_df-padding-mobile);
+    margin-right: calc(-1 * var(--layout_df-padding-mobile));
+  }
+
+  .media_upload_preview{
+    margin-bottom:35px;
+  }
+
+  .data-item,
+  .data-sub-item{
+    margin-bottom:30px;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+
+  .data-item-desc{
+    display:block;
+    margin-top:-10px;
+    margin-bottom:25px;
+  }
+
+  label{
+    display:block;
+    margin-bottom:15px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select{
+    width:100%;
+  }
+
+  textarea{
+    display:block;
+  }
+
+}
+
+.form-submit-wrapper{
+  &.dropzone{
+    min-height:0;
+    border:none;
+    padding:0;
+    @include border-radius(7px);
+
+    .dz-preview{
+      display:block;
+      margin:0;
+      width:100%;
+      min-height:30px;
+      background:transparent;
+
+      &+.dz-preview{
+        margin-top:30px;
+      }
+
+      .dz-error-mark,
+      .dz-image{
+        display:none !important;
+      }
+
+      .dz-progress{
+        height:10px;
+        z-index:2;
+        top:0;
+        left:0;
+        right:0;
+        border: none;
+        margin-top:-2px;
+        background: var(--color__button-background-reverse);
+        @include border-radius(0);
+
+        .dz-upload{
+          background: var(--color__main);
+          @include border-radius(0);
+        }
+      }
+
+      &.dz-complete{
+        .dz-progress{
+          opacity:1;
+        }
+      }
+
+      &:not(.dz-processing){
+        .dz-progress{
+          animation:none;
+        }
+      }
+
+      .dz-details{
+        z-index:1;
+        padding:0;
+        opacity:1;
+        text-align:left;
+        top:15px;
+
+        line-height: var(--font__main-line-height);
+        color: var(--color__text-main);
+
+        .dz-size{
+          margin-bottom:5px;
+          font-size: var(--font__main-size-12-px);
+          font-size: var(--font__main-size-12-rem);
+        }
+
+        .dz-filename{
+          display:none;
+        }
+
+        .dz-size{
+          span{
+            background:transparent;
+            padding:0;
+            border:none;
+            @include border-radius(0);
+          }
+        }
+
+      }
+
+      .dz-remove{
+        position: absolute;
+        top: 15px;
+        right: 0;
+        z-index: 1;
+
+        color: var(--color__title-link);
+
+        font-size: var(--font__main-size-12-px);
+        font-size: var(--font__main-size-12-rem);
+
+        font-size: var(--font__main-size-12-px);
+        font-size: var(--font__main-size-12-rem);
+      }
+
+      .dz-error-message{
+        padding:0;
+        opacity: 1;
+        background: transparent;
+        top: 15px;
+        right: auto;
+        left: 0;
+        bottom:auto;
+        z-index: 1;
+        width: 50%;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        color: var(--color__main);
+
+        font-size: var(--font__main-size-12-px);
+        font-size: var(--font__main-size-12-rem);
+
+        &:after{
+          display:none;
+        }
+      }
+
+      &.dz-error{
+        .dz-details{
+          .dz-size{
+            display:none;
+          }
+        }
+      }
+
+      .dz-error-mark{
+        display:none;
+      }
+
+    }
+  }
+}
+
+.beeteam368_media_upload{
+  border:2px dashed var(--color__hr-background);
+  padding:30px;
+  text-align:center;
+
+  > *:not(:last-child){
+    margin-bottom:15px;
+  }
+
+  &.is-dragover{
+    opacity:0.5;
+    > * {
+      pointer-events:none !important;
+    }
+    @include transiton-builder(opacity 0.3s);
+  }
+}
+
+.form-submit-live-alerts{
+  margin-bottom:30px;
+  @include border-radius(3px);
+  &:empty{
+    display:none;
+  }
+  span{
+    display:block;
+    background-color: #DC3545;
+    color:#FFFFFF;
+    padding:6px 15px 5px 15px;
+    @include border-radius(3px);
+    &+span{
+      margin-top:15px;
+    }
+
+    a{
+      color:#FFFFFF;
+    }
+  }
+
+  span.success{
+    background-color:#198754;
+  }
+}
+
+.data-item .select2-container{
+  width:100% !important;
+  display:block;
+}
+
+.beeteam368-submit-post-popup .mce-widget[aria-label="Fullscreen"]{
+  display:none !important;
+}
+
+.beeteam368-live-event-info{
+
+  display:block;
+
+  padding: var(--layout_df-padding);
+
+  @media(max-width: 575px){
+    padding: var(--layout_df-padding-mobile);
+  }
+
+  .beeteam368-live-event-content{
+  }
+
+  .live-stream-input{
+    width:100%;
+
+    &:not(:last-child){
+      margin-bottom:20px;
+    }
+  }
+
+  .live-stream-key-ipt{
+    &:not(:last-child){
+      margin-bottom:40px;
+    }
+  }
+
+  .click-open-live-webcam{
+    &:not(:last-child){
+      margin-bottom:40px;
+    }
+  }
+
+  .click-open-live-webcam,
+  .click-stop-live-streaming,
+  .click-download-record{
+    display:block;
+    width:100%;
+  }
+
+  .live-action-disabled{
+    opacity:0.5;
+    pointer-events:none !important;
+  }
+
+  .click-stop-live-streaming + .click-download-record{
+    margin-top:10px;
+  }
+}
+
+.live-counter{
+  display: block;
+  position:absolute;
+  padding: 0 8px;
+  pointer-events: none;
+  background-color: #DC3545;
+  color:#FFFFFF;
+  z-index:3;
+  top:var(--layout_df-padding);
+  left:var(--layout_df-padding);
+  @media(max-width: 575px){
+    top:var(--layout_df-padding-mobile);
+    left:var(--layout_df-padding-mobile);
+  }
+  @include border-radius(3px);
+}

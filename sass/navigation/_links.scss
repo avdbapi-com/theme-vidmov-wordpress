@@ -1,0 +1,45 @@
+a {
+  color: var(--color__link);
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    outline: 0;
+  }
+
+  &:visited {
+    color: var(--color__link-visited);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color__link-hover);
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include transiton-builder(color 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  a {
+    color: var(--color__title-link);
+    text-decoration: none;
+
+    &:visited {
+      color: var(--color__title-link);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--color__title-link-hover);
+    }
+  }
+}

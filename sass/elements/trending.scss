@@ -1,0 +1,22 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.trending-icon{
+  color:#FFFFFF;
+  /*
+  background: rgb(204,61,218);
+  background: -moz-linear-gradient(90deg, rgba(204,61,218,1) 0%, rgba(124,53,226,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(204,61,218,1) 0%, rgba(124,53,226,1) 100%);
+  background: linear-gradient(90deg, rgba(204,61,218,1) 0%, rgba(124,53,226,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cc3dda",endColorstr="#7c35e2",GradientType=1);
+  */
+  background-color:#0A84FF;
+  min-width:38px;
+  text-align:center;
+  > *{
+    line-height:1;
+  }
+  padding:0 8px;
+
+  @include border-radius(3px);
+}

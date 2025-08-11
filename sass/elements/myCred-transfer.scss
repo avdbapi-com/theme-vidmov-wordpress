@@ -1,0 +1,320 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+:root{
+  --color__tab-myCred-active:#FFFFFF;
+  --color__tab-myCred-background-active:#{$color__main};
+  --color__tab-myCred-border-active:#{$color__main};
+}
+
+form#mycred-transfer-form-transfer,
+form#mycred-transfer-form-donation{
+  margin:0;
+  padding:0;
+  background:transparent;
+  @include prefixer(box-shadow, none, spec webkit);
+
+  label{
+    margin-bottom:10px;
+    display:block;
+
+    @include font-family(
+      var(--font__heading),
+      var(--font__heading-weight),
+      var(--font__heading-letter-spacing),
+      var(--font__heading-text-transform),
+      var(--font__heading-text-decoration),
+      var(--font__heading-style),
+      var(--font__heading-line-height),
+      var(--font__heading-size-px),
+      var(--font__heading-size-rem)
+    );
+
+    font-size: var(--font__h5-font-size-px);
+    font-size: var(--font__h5-font-size-rem);
+  }
+
+  .select-recipient-wrapper{
+    .form-control{
+      margin-bottom:30px;
+    }
+  }
+
+  .select-point-type-wrapper{
+    margin-top:30px;
+  }
+
+  span.form-control-static{
+    margin:0 0 20px 0;
+    display:block;
+    @include font-family(
+      var(--font__heading),
+      var(--font__heading-weight),
+      var(--font__heading-letter-spacing),
+      var(--font__heading-text-transform),
+      var(--font__heading-text-decoration),
+      var(--font__heading-style),
+      var(--font__heading-line-height),
+      var(--font__heading-size-px),
+      var(--font__heading-size-rem)
+    );
+
+    font-size: var(--font__h1-font-size-px);
+    font-size: var(--font__h1-font-size-rem);
+
+    color:var(--color__main);
+  }
+
+  input{
+    width:100%;
+    margin:0;
+  }
+
+  .mycred-submit-transfer,
+  .buy-points{
+    width:calc(50% - 5px);
+    margin-right:10px;
+    margin-top:0;
+    margin-bottom:0;
+    &:last-child{
+      margin-right:0;
+    }
+
+    @media(max-width: 575px){
+      width:100%;
+      margin-right:0;
+      margin-bottom:10px;
+      &:last-child{
+        margin-bottom:0;
+      }
+    }
+  }
+
+  .row{
+    margin:0 0 30px 0;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+
+  .default-bonus-wrapper{
+    margin:20px -5px 0 -5px;
+    .default-bonus{
+      display:inline-block;
+      padding:3px 10px;
+      border: 1px solid var(--color__hr-background);
+      margin:0 5px 5px 5px;
+      cursor:pointer;
+
+      &.active-item{
+        color:var(--color__tab-myCred-active);
+        background-color: var(--color__tab-myCred-background-active);
+        border-color:var(--color__tab-myCred-border-active);
+      }
+    }
+  }
+}
+
+body.beeteam368-body-control-class{
+  #cashcred{
+    margin-bottom:40px;
+
+    &+.only-show-when-ntc{
+      display:none;
+    }
+
+    #cashcred_tab_content{
+      .cashcred-tab{
+        padding: var(--layout_df-padding);
+        border:1px solid var(--color__hr-background);
+        float:none;
+        @include border-radius(5px);
+        @media(max-width: 575px){
+          padding: var(--layout_df-padding-mobile);
+        }
+
+        .mycred-cashcred-form{
+          &:after{
+            content:'';
+            display:table;
+            clear:both;
+          }
+        }
+
+        &:first-child{
+          display:block;
+        }
+      }
+    }
+
+    .cashcred-nav-tabs{
+      margin:0 -5px;
+      list-style: none;
+      li{
+        padding:5px var(--layout_df-padding);
+        border: 1px solid var(--color__hr-background);
+        margin:0 5px 5px 5px;
+
+        @include border-radius(5px);
+        @media(max-width: 575px){
+          padding:5px var(--layout_df-padding-mobile);
+        }
+        a{
+          text-decoration:none;
+          @include font-family(
+            var(--font__heading),
+            var(--font__heading-weight),
+            var(--font__heading-letter-spacing),
+            var(--font__heading-text-transform),
+            var(--font__heading-text-decoration),
+            var(--font__heading-style),
+            var(--font__heading-line-height),
+            var(--font__heading-size-px),
+            var(--font__heading-size-rem)
+          );
+
+          font-size: var(--font__h6-font-size-px);
+          font-size: var(--font__h6-font-size-rem);
+
+          color: var(--color__title-link);
+        }
+        &.active{
+          background-color: var(--color__tab-myCred-background-active);
+          border-color:var(--color__tab-myCred-border-active);
+          a{
+            color:var(--color__tab-myCred-active);
+          }
+        }
+      }
+
+      &:after{
+        content:'';
+        display:table;
+        clear:both;
+      }
+    }
+
+    .form-group{
+      margin-bottom:25px;
+
+      &:last-child{
+        margin-bottom:0;
+      }
+
+      label{
+        padding:0;
+        margin-bottom:10px;
+        display:block;
+
+        @include font-family(
+          var(--font__heading),
+          var(--font__heading-weight),
+          var(--font__heading-letter-spacing),
+          var(--font__heading-text-transform),
+          var(--font__heading-text-decoration),
+          var(--font__heading-style),
+          var(--font__heading-line-height),
+          var(--font__heading-size-px),
+          var(--font__heading-size-rem)
+        );
+
+        font-size: var(--font__h5-font-size-px);
+        font-size: var(--font__h5-font-size-rem);
+      }
+    }
+
+    input[type="number"],
+    textarea,
+    input[type="text"]{
+      padding:6px 15px;
+      border: 1px solid var(--color__input-border);
+      @include border-radius(3px);
+
+      &:focus {
+        color: var(--color__input-text-focus);
+        border-color: var(--color__input-border-focus);
+        background-color: var(--color__input-background-focus);
+      }
+    }
+
+    select {
+      color: var(--color__input-text);
+      border: 1px solid var(--color__input-border);
+      background-color: var(--color__input-background);
+      padding: 8px 10px;
+      outline: none;
+
+      &:focus {
+        color: var(--color__input-text-focus);
+        border-color: var(--color__input-border-focus);
+        background-color: var(--color__input-background-focus);
+      }
+    }
+
+    input[type="submit"]{
+      margin:0;
+      &:hover{
+        background-color: var(--color__button-background-hover);
+      }
+    }
+
+    .cashcred_gateway_notice{
+      display:none !important;
+      margin-bottom:15px;
+      font-size: var(--font__main-size-12-px);
+      font-size: var(--font__main-size-12-rem);
+      color:var(--color__main);
+    }
+
+    .cashcred-notice{
+      margin-top:0;
+      color:var(--color__main);
+    }
+
+    .cashcred_panel{
+      margin-bottom:30px;
+    }
+
+    #cashcred_total{
+      margin:0;
+      padding:3px 0;
+      border-bottom: 3px double var(--color__hr-background);
+      border-top: 3px double var(--color__hr-background);
+    }
+
+    @media(max-width: 767px){
+      #cashcred_total,
+      #submit_button{
+        float:none;
+        width:100%;
+      }
+
+      #cashcred_total{
+        margin-bottom:30px;
+      }
+
+      input[type="submit"]{
+        width:100%;
+      }
+    }
+  }
+
+  .mycred-history-wrapper{
+    .pagination{
+      margin:0;
+    }
+    .pagination-top{
+      padding-bottom:17px;
+      border-bottom:1px solid var(--color__hr-background);
+      margin-bottom: 20px;
+    }
+    .pagination-bottom{
+      padding-top:17px;
+      border-top:1px solid var(--color__hr-background);
+    }
+  }
+}
+
+.mycred-private-notice{
+  margin-bottom:25px;
+}

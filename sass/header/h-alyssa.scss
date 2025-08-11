@@ -1,0 +1,183 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+:root {
+  --height__h-alyssa-top-menu-height: 66px;
+  --height__h-alyssa-main-menu-height: 66px;
+  --height__h-alyssa-top-menu-height-mobile: 56px;
+  --height__h-alyssa-main-menu-height-mobile: 56px;
+
+  --color__h-alyssa-top-menu-background: #FFFFFF;
+  --color__h-alyssa-top-menu-border: #F0F2F5;
+  --color__h-alyssa-main-menu-background: #FFFFFF;
+  --color__h-alyssa-main-menu-border: #F0F2F5;
+}
+
+.beeteam368-top-menu {
+  background-color: var(--color__h-alyssa-top-menu-background);
+  border-bottom: 1px solid var(--color__h-alyssa-top-menu-border);
+  position: relative;
+  z-index: 7;
+  width: 100%;
+}
+
+.beeteam368-top-menu-row {
+  min-height: var(--height__h-alyssa-top-menu-height);
+
+  .beeteam368-search-suggestions {
+    padding-top: 4.5rem;
+  }
+}
+
+.side-close-btn {
+  min-height: var(--height__h-alyssa-top-menu-height);
+}
+
+.beeteam368-main-menu {
+  @include prefixer(box-shadow, 0px 1px 8px 1px var(--color__global-box-shadow), spec webkit);
+  background-color: var(--color__h-alyssa-main-menu-background);
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.beeteam368-main-menu-row {
+  min-height: var(--height__h-alyssa-main-menu-height);
+}
+
+.beeteam368-logo {
+  @include prefixer(flex, 1, spec webkit ms);
+}
+
+.beeteam368-logo-wrap {
+  text-align: left;
+}
+
+.beeteam368-main-nav {
+  @include prefixer(flex, 1, spec webkit ms);
+}
+
+.beeteam368-searchbox {
+
+  width: 333px;
+
+  @media(max-width: 1365px) {
+    width: 233px;
+  }
+
+  //custom position search box wrap
+  .beeteam368-searchbox-wrap {
+    .beeteam368-searchform {
+      max-width: 700px;
+    }
+
+    @media(min-width: 992px) {
+      &.focus-active {
+        margin-left: -150px;
+      }
+    }
+
+    .beeteam368-searchtext {
+      @media(max-width: 575px) {
+        & ~ .beeteam368-search-suggestions {
+          @include border-radius(0);
+        }
+        &:focus {
+          width: calc(100% + 0px);
+
+          & ~ .beetam368-back-focus {
+            left: 0;
+          }
+
+          & ~ .beeteam368-search-suggestions {
+            left: calc(var(--grid_gutter_df) / 2 * -1);
+            right: calc(var(--grid_gutter_df) / 2 * -1);
+          }
+        }
+      }
+    }
+  }
+  //custom position search box wrap
+}
+
+.beeteam368-h-alyssa {
+  .beeteam368-main-nav {
+    min-height: var(--height__h-alyssa-main-menu-height);
+    @media(max-width: 991px) {
+      min-height: var(--height__h-alyssa-main-menu-height-mobile);
+    }
+    @media(min-width: 992px) {
+      > ul > li > a {
+        min-height: var(--height__h-alyssa-main-menu-height);
+      }
+    }
+  }
+}
+
+//*mobile
+@media(min-width: 992px) {
+  .beeteam368-social-account-sub-nav {
+    display: none;
+  }
+  .beeteam368-logo-mobile {
+    display: none;
+  }
+}
+
+@media(max-width: 991px) {
+
+  .side-menu-mode.sidemenu-right{
+    .beeteam368-searchbox{
+      order:1;
+    }
+    .beeteam368-mobile-menu-btn{
+      order:2;
+    }
+    .beeteam368-logo-mobile{
+      order:1;
+    }
+    .beeteam368-social-account-sub-nav,
+    .beeteam368-social-account-sub-login-nav{
+      order:0;
+    }
+  }
+
+  .beeteam368-searchbox {
+    width: auto;
+    @include prefixer(flex, 1, spec webkit ms);
+    z-index: 9;
+  }
+
+  .beeteam368-top-menu-row,
+  .side-close-btn {
+    min-height: var(--height__h-alyssa-top-menu-height-mobile);
+  }
+
+  .beeteam368-main-menu-row {
+    min-height: var(--height__h-alyssa-main-menu-height-mobile);
+
+    .beeteam368-main-nav {
+      @include prefixer(flex, 0, spec webkit ms);
+      padding: 0;
+    }
+  }
+
+  .beeteam368-social-account {
+    .beeteam368-dark-light-btn {
+      display: none;
+    }
+  }
+
+  .beeteam368-logo {
+    display: none;
+  }
+  .beeteam368-logo-mobile {
+    @include prefixer(flex, 1, spec webkit ms);
+  }
+  .beeteam368-logo-wrap {
+    text-align: center;
+  }
+}
+
+@include mobileMenuOpen('--height__top-bar', '--color__h-alyssa-main-menu-border', '--height__h-all-main-menu-height-open-mobile');
+//*mobile

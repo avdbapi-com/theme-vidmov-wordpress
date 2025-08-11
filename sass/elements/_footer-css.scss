@@ -1,0 +1,15 @@
+.beeteam368-global-popup{
+  margin:0 !important;
+  &:not(.active-item){
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none !important;
+    *{
+      pointer-events:none !important;
+    }
+  }
+
+  overflow:hidden;
+  max-width:0;
+  max-height:0;
+}

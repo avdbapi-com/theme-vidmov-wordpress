@@ -1,0 +1,208 @@
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+:root{
+  --color__global-modal-background: rgba(1,0,1,0.38);
+  --color__global-popup-background: #FFFFFF;
+}
+
+//Global Popup
+.beeteam368-global-popup{
+  max-width:none;
+  max-height:none;
+  overflow:visible;
+
+  position:fixed;
+  z-index:999999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  cursor:auto;
+
+  line-height:var(--font__main-line-height);
+  background-color: var(--color__global-modal-background);
+
+  @include transiton-builder(opacity 0.368s ease-in-out, visibility 0.368s ease-in-out);
+
+  .beeteam368-global-popup-content{
+    width:500px;
+    max-width:calc(100% - 20px);
+    padding: 40px;
+    position:relative;
+
+    @media(max-width: 575px){
+      padding: 30px var(--layout_df-padding-mobile);
+    }
+
+    background-color: var(--color__global-popup-background);
+    @include border-radius(8px);
+    @include prefixer(box-shadow, 0px 0px 28px 0px var(--color__global-box-content-shadow), spec webkit);
+    @include transiton-builder(transform 0.368s ease-in-out);
+  }
+
+  .popup-form-banner{
+    margin-bottom:30px;
+    overflow:hidden;
+    @include border-radius(5px);
+    @include prefixer(transform, translate3d(0,0,0), spec webkit);
+    img{
+      display:block;
+    }
+  }
+
+  .beeteam368-popup-close{
+    position:absolute;
+    z-index:1;
+    top:var(--layout_df-padding);
+    right:var(--layout_df-padding);
+    @media(max-width: 575px){
+      top:var(--layout_df-padding-mobile);
+      right:var(--layout_df-padding-mobile);
+    }
+  }
+
+  &:not(.active-item){
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none !important;
+    *{
+      pointer-events:none !important;
+    }
+    .beeteam368-global-popup-content {
+      @include prefixer(transform, translateY(15px), spec webkit);
+    }
+  }
+
+  .beeteam368-popup-mess{
+    display:block;
+    min-width:450px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    z-index:6;
+    text-align:center;
+    padding: 40px;
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+
+    border: 1px solid var(--color__hr-background);
+
+    @media(max-width: 575px){
+      min-width:320px;
+      padding: 30px var(--layout_df-padding-mobile);
+    }
+
+    background-color: var(--color__global-popup-background);
+    @include prefixer(transform, translate(-50%, -68%), spec webkit);
+    @include border-radius(8px);
+    @include prefixer(box-shadow, 0px 0px 28px 0px var(--color__global-box-content-shadow), spec webkit);
+    @include transiton-builder(transform 0.368s ease-in-out, opacity 0.368s ease-in-out, visibility 0.368s ease-in-out);
+
+    .text-mess{
+      display:block;
+      margin-bottom:20px;
+    }
+
+    &.active-item{
+      opacity:1;
+      visibility:visible;
+      pointer-events:auto;
+      @include prefixer(transform, translate(-50%, -50%), spec webkit);
+    }
+  }
+}//Global Popup
+
+//myCred Notice
+.notice-wrap{
+  top:50%;
+  right:auto;
+  left:50%;
+  opacity:1;
+  @include prefixer(box-shadow, 0px 0px 20px 0px var(--color__global-box-content-shadow), spec webkit);
+  @include border-radius(8px);
+  @include prefixer(transform, translate(-50%,-50%), spec webkit);
+}
+.notice-item{
+  margin:0;
+  text-align:center;
+  padding: var(--layout_df-padding);
+  background-color: var(--color__global-popup-background);
+  color: var(--color__text-main);
+  @include font-family(
+    var(--font__main),
+    var(--font__main-weight),
+    var(--font__main-letter-spacing),
+    var(--font__main-text-transform),
+    var(--font__main-text-decoration),
+    var(--font__main-style),
+    var(--font__main-line-height),
+    var(--font__main-size-px),
+    var(--font__main-size-rem)
+  );
+
+  font-size: var(--font__main-size-12-px);
+  font-size: var(--font__main-size-12-rem);
+
+  @media(max-width: 575px){
+    padding: var(--layout_df-padding) var(--layout_df-padding-mobile);
+  }
+
+  p{
+    float:none;
+  }
+
+  h1{
+    margin:10px 0 !important;
+    &:last-child{
+      margin-bottom:0 !important;
+    }
+  }
+}
+
+.notice-item-close{
+  float: none;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  @include prefixer(transform, translateX(-50%), spec webkit);
+}//myCred Notice
+
+//C
+.sgcc-main-wrapper{
+  @include border-radius(8px);
+  @include prefixer(box-shadow, 0px 0px 28px 0px var(--color__global-box-content-shadow), spec webkit);
+
+  .message-block{
+    margin-bottom:20px;
+  }
+
+  .sgcc-cookies{
+    padding: 40px 40px 40px 83px !important;
+    .cookie-icon{
+      left:40px !important;
+      top: 40px !important;
+    }
+
+    @media(max-width: 575px){
+      padding: var(--layout_df-padding-mobile) var(--layout_df-padding-mobile) var(--layout_df-padding-mobile) 63px !important;
+
+      .cookie-icon{
+        left:var(--layout_df-padding-mobile) !important;
+        top: 20px !important;
+      }
+    }
+
+  }
+
+  &[class*="-bottom-right"],
+  &[class*="-bottom-left"],
+  &[class*="-bottom-center"]{
+    @media(max-width: 991px){
+      bottom: 80px;
+    }
+  }
+
+}

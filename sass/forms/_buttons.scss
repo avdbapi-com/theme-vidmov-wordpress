@@ -1,0 +1,225 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btnn-default,
+a.btnn-default.btnn-primary,
+.wp-block-button__link,
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+
+.woocommerce #respond input#submit.disabled,
+.woocommerce #respond input#submit:disabled,
+.woocommerce #respond input#submit:disabled[disabled],
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce input.button.disabled,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled],
+
+.woocommerce #respond input#submit.alt.disabled,
+.woocommerce #respond input#submit.alt.disabled:hover,
+.woocommerce #respond input#submit.alt:disabled,
+.woocommerce #respond input#submit.alt:disabled:hover,
+.woocommerce #respond input#submit.alt:disabled[disabled],
+.woocommerce #respond input#submit.alt:disabled[disabled]:hover,
+.woocommerce a.button.alt.disabled,
+.woocommerce a.button.alt.disabled:hover,
+.woocommerce a.button.alt:disabled,
+.woocommerce a.button.alt:disabled:hover,
+.woocommerce a.button.alt:disabled[disabled],
+.woocommerce a.button.alt:disabled[disabled]:hover,
+.woocommerce button.button.alt.disabled,
+.woocommerce button.button.alt.disabled:hover,
+.woocommerce button.button.alt:disabled,
+.woocommerce button.button.alt:disabled:hover,
+.woocommerce button.button.alt:disabled[disabled],
+.woocommerce button.button.alt:disabled[disabled]:hover,
+.woocommerce input.button.alt.disabled,
+.woocommerce input.button.alt.disabled:hover,
+.woocommerce input.button.alt:disabled,
+.woocommerce input.button.alt:disabled:hover,
+.woocommerce input.button.alt:disabled[disabled],
+.woocommerce input.button.alt:disabled[disabled]:hover{
+  border: none;
+  background-image: none;
+  text-shadow: none;
+  vertical-align: top;
+  display: inline-block;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration:none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  background-color: var(--color__button-background);
+  color: var(--color__button-text);
+  border: 1px solid var(--color__button-border);
+
+  padding: 6px 25px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration:none;
+    background-color: var(--color__button-background-hover);
+    color: var(--color__button-text-hover);
+    border-color: var(--color__button-border-hover);
+  }
+
+  &.icon-style{
+    min-width:50px;
+    color: var(--color__icon);
+    background-color: var(--color__icon-background);
+    border-color: var(--color__icon-background);
+
+    &:hover,
+    &:active,
+    &:focus{
+      color: var(--color__icon-hover);
+      background-color: var(--color__icon-background-hover);
+      border-color: var(--color__icon-background-hover);
+    }
+  }
+
+  &.reverse{
+    background-color: var(--color__button-background-reverse);
+    color: var(--color__button-text-reverse);
+    border-color: var(--color__button-border-reverse);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--color__button-background);
+      color: var(--color__button-text);
+      border: 1px solid var(--color__button-border);
+    }
+  }
+
+  &.green-color-hd-sp{
+    background-color: #5FD068;
+    color: #FFFFFF;
+    border-color: #5FD068;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--color__icon-hover);
+      background-color: var(--color__icon-background-hover);
+      border-color: var(--color__icon-background-hover);
+    }
+  }
+
+  &.media-label{
+    pointer-events:none;
+    padding-left:12px;
+    padding-right:12px;
+    color: var(--color__duration);
+    background-color: var(--color__duration-background);
+    border-color: var(--color__duration-background);
+    .med-sped{
+      margin:0 3px;
+      &:last-child{
+        display:none;
+      }
+    }
+
+    .med-quality{
+      padding: 2px 8px;
+      background-color: rgba(255,255,255,0.38);
+      margin: 3px;
+      border:1px solid rgba(255,255,255,0.9);
+      @include border-radius(3px);
+    }
+  }
+
+  &.fw-spc-btn{
+    width:100%;
+  }
+
+  &.no-spc-bdr{
+    @include border-radius(0);
+  }
+
+  &.is-disabled{
+    cursor:no-drop;
+  }
+
+  @include font-family(
+    var(--font__button),
+    var(--font__button-weight),
+    var(--font__button-letter-spacing),
+    var(--font__button-text-transform),
+    var(--font__button-text-decoration),
+    var(--font__button-style),
+    var(--font__button-line-height),
+    var(--font__button-size-px),
+    var(--font__button-size-rem)
+  );
+
+  @include border-radius(3px);
+  @include transiton-builder(color 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.3s, visibility 0.3s, width 0.3s, box-shadow 0.3s);
+  @include prefixer(box-shadow, none, spec webkit);
+  @include prefixer(user-select, none, spec webkit);
+
+  .icon{
+    margin-left:8px;
+    margin-right:8px;
+    display: inline-block;
+    font-size: calc(var(--font__button-size-rem) * 1.15);
+    @include prefixer(transform, translate3d(0, 1px, 0), spec webkit);
+
+    &:first-child{
+      margin-left:0;
+    }
+
+    &:last-child{
+      margin-right:0;
+    }
+
+  }
+
+  &.small-style{
+    padding: 5px 15px;
+    font-size: var(--font__button-size-12-px);
+    font-size: var(--font__button-size-12-rem);
+    .icon{
+      font-size: calc(var(--font__button-size-12-rem));
+    }
+  }
+
+}
+
+.font-button-size-12 {
+  font-size: var(--font__button-size-12-px);
+  font-size: var(--font__button-size-12-rem);
+}
+
+.wp-block-button__link{
+  @include border-radius(9999px);
+}
+
+.wp-editor-container{
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"]{
+
+      background:transparent;
+
+  }
+}

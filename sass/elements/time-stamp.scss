@@ -1,0 +1,69 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.beeteam368-time-stamp{
+  padding: var(--layout_df-padding);
+  @media(max-width: 575px){
+    padding: var(--layout_df-padding-mobile);
+  }
+  background-color: var(--color__post-item-wrap-background);
+}
+
+.beeteam368-time-stamp-container{
+  margin:-5px;
+}
+
+.beeteam368-time-action{
+  margin:5px;
+  cursor:pointer;
+  padding:8px 15px;
+
+  width:calc(50% - 10px);
+  @media(max-width: 991px){
+    width:calc(100% - 10px);
+  }
+
+  border: 1px dashed var(--color__hr-background);
+
+  @include border-radius(3px);
+
+  @include prefixer(flex-flow, row wrap, spec webkit);
+  @include prefixer(box-pack, center, spec webkit);
+  @include prefixer(box-align, center, webkit moz ms);
+  @include prefixer(align-items, center, spec webkit);
+
+  i{
+    margin-right:8px;
+  }
+
+  &:hover{
+    background-color: var(--color__button-background-hover);
+    color: var(--color__button-text-hover);
+    border-color: var(--color__button-border-hover);
+  }
+
+}
+
+.time-action-value{
+  display:block;
+  padding-right:15px;
+  white-space:nowrap;
+  border-right: 1px solid var(--color__hr-background);
+}
+
+.time-action-title{
+  display:block;
+  padding-left:15px;
+  flex:1;
+}
+
+.beeteam368-player{
+  &:not(:nth-last-child(2)){
+    .beeteam368-time-stamp{
+      margin-bottom: calc(-1 * var(--layout_df-padding));
+      @media(max-width: 575px){
+        margin-bottom: calc(-1 * var(--layout_df-padding-mobile));
+      }
+    }
+  }
+}

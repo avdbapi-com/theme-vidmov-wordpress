@@ -1,0 +1,280 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.memberpress-media-info-wrapper{
+  width:100%;
+  position:relative;
+  text-align:center;
+  padding: var(--layout_df-padding);
+  @media(max-width: 575px){
+    padding: var(--layout_df-padding-mobile);
+  }
+
+  a.btnn-default,
+  button{
+    margin:4px;
+    @media(max-width: 575px){
+      padding-left:15px;
+      padding-right:15px;
+    }
+  }
+}
+
+.memberpress-media-heading{
+  margin-bottom:3px;
+}
+
+.memberpress-media-descriptions{
+  margin-bottom:22px;
+}
+
+.plan-special{
+  display:inline-block;
+  background-color: var(--color__sub);
+  color: #FFFFFF;
+  padding:0 8px;
+  line-height:1.6;
+  @include border-radius(10px);
+
+  margin: 0 5px 5px 0;
+
+  &:last-child{
+    margin-right:0;
+  }
+}
+
+.mp_wrapper {
+  textarea, 
+  select, 
+  input[type=text], 
+  input[type=url], 
+  input[type=email], 
+  input[type=tel], 
+  input[type=number], 
+  input[type=password]{
+    color: var(--color__input-text);
+    border: 1px solid var(--color__input-border);
+    background-color: var(--color__input-background);
+    padding: 6px 15px;
+    outline: none;
+
+    &:focus {
+      color: var(--color__input-text-focus);
+      border-color: var(--color__input-border-focus);
+      background-color: var(--color__input-background-focus);
+    }
+
+    @include font-family(
+      var(--font__field),
+      var(--font__field-weight),
+      var(--font__field-letter-spacing),
+      var(--font__field-text-transform),
+      var(--font__field-text-decoration),
+      var(--font__field-style),
+      var(--font__field-line-height),
+      var(--font__field-size-px),
+      var(--font__field-size-rem),
+    );    
+  }
+
+  .mp-form-row label{
+    display: block !important;    
+    color: var(--color__text-heading);
+    word-break: break-word;
+    @include resetTag;
+    @include font-family(
+      var(--font__heading),
+      var(--font__heading-weight),
+      var(--font__heading-letter-spacing),
+      var(--font__heading-text-transform),
+      var(--font__heading-text-decoration),
+      var(--font__heading-style),
+      var(--font__heading-line-height),
+      var(--font__heading-size-px),
+      var(--font__heading-size-rem)
+    );
+
+    font-size: var(--font__h6-font-size-px);
+    font-size: var(--font__h6-font-size-rem);
+    margin-bottom:10px;
+  }
+
+  .mp-form-row{
+    margin-bottom:25px;
+  }
+
+  .mepr-form-has-errors, 
+  .cc-error, 
+  .mepr-validation-error{
+    padding:0;
+
+    &[style="display: inline;"]{
+      display:block !important;
+      margin-top:-10px;
+      margin-bottom:12px;
+    }
+  }
+
+  .mepr_price{
+    @include font-family(
+      var(--font__heading),
+      var(--font__heading-weight),
+      var(--font__heading-letter-spacing),
+      var(--font__heading-text-transform),
+      var(--font__heading-text-decoration),
+      var(--font__heading-style),
+      var(--font__heading-line-height),
+      var(--font__heading-size-px),
+      var(--font__heading-size-rem)
+    );
+
+    font-size: var(--font__h6-font-size-px);
+    font-size: var(--font__h6-font-size-rem);
+
+    .mepr_price_cell{
+      display: block !important;
+      font-size: var(--font__h1-single-size-px);
+      font-size: var(--font__h1-single-size-rem);
+      @media(max-width: 1199px){
+        font-size: var(--font__h1-font-size-px);
+        font-size: var(--font__h1-font-size-rem);
+      }
+    }
+  }
+
+  .mepr_payment_method{
+    padding: var(--layout_df-padding) !important;
+    @media(max-width: 575px){
+      padding: var(--layout_df-padding-mobile) !important;
+    }
+    @include border-radius(7px);
+    background-color: var(--color__body-background) !important;
+    
+    .mp-checkbox-field{
+      &:last-child{
+        margin-bottom:0;
+      }
+    }
+  }
+
+  .mepr-payment-method{
+    margin-bottom:0;
+  }
+
+  .mepr-payment-method .mepr-payment-method-desc-text{
+    padding: var(--layout_df-padding) !important;
+    @media(max-width: 575px){
+      padding: var(--layout_df-padding-mobile) !important;
+    }
+    background-color: var(--color__post-item-wrap-background) !important;
+    @include border-radius(7px);
+
+    >p:first-child{
+      margin-top:0;
+    }
+
+    >p:last-child{
+      margin-bottom:0;
+    }
+  }
+
+  .mepr-payment-method .mepr-payment-method-label-text, 
+  .mepr-payment-method span.mepr-payment-method-icon{
+    padding-left:10px;
+  }
+
+  table.mepr-account-table th,
+  table.mepr-account-table td{
+    padding: 13px 20px 12px 20px;
+    border: 1px solid var(--color__hr-background);
+    font-size: var(--font__main-size-12-px);
+    font-size: var(--font__main-size-12-rem);
+  }
+
+  .mepr-account-terms, 
+  .mepr-account-subscr-id, 
+  .mepr-account-rebill{
+    color: var(--color__text-main);
+    font-size: var(--font__main-size-12-px);
+    font-size: var(--font__main-size-12-rem);
+  }
+}
+
+.mepr-price-menu.minimal_horizontal .mepr-price-boxes{
+  width: auto;
+  @include flexRowControl;
+  @include rowSettings;
+}
+
+.mepr-price-menu.minimal_horizontal .mepr-price-boxes[class*="-col"] .mepr-price-box{
+  
+  display: block;
+  @include border-radius(7px);
+  background-color:var(--color__body-background) !important;
+  position: relative;
+
+  padding: var(--layout_df-padding);
+  width:calc(50% - var(--layout_df-padding));
+  margin-left: calc(var(--layout_df-padding) / 2);
+  margin-right: calc(var(--layout_df-padding) / 2);
+  @media(max-width: 575px){
+    padding: var(--layout_df-padding-mobile);
+    width:calc(50% - var(--layout_df-padding-mobile));
+    margin-left: calc(var(--layout_df-padding-mobile) / 2);
+    margin-right: calc(var(--layout_df-padding-mobile) / 2);
+  }
+
+  margin-bottom: var(--layout_df-padding);
+
+  @media(max-width:767px){
+    width:100%;
+    margin-bottom: var(--layout_df-padding-mobile);
+  }
+}
+
+.mepr-price-menu.minimal_horizontal .mepr-price-box-price,
+.mepr-price-menu.minimal_horizontal .mepr-price-box-title{
+  @include font-family(
+    var(--font__heading),
+    var(--font__heading-weight),
+    var(--font__heading-letter-spacing),
+    var(--font__heading-text-transform),
+    var(--font__heading-text-decoration),
+    var(--font__heading-style),
+    var(--font__heading-line-height),
+    var(--font__heading-size-px),
+    var(--font__heading-size-rem)
+  );
+  margin-top:0;
+}
+
+.mepr-price-menu.minimal_horizontal .mepr-price-box-price{
+  font-size: var(--font__h1-single-size-px);
+  font-size: var(--font__h1-single-size-rem);
+  @media(max-width: 1199px){
+    font-size: var(--font__h1-font-size-px);
+    font-size: var(--font__h1-font-size-rem);
+  }
+}
+
+.mp_wrapper .mepr-form-has-errors, .mp_wrapper .cc-error, .mp_wrapper .mepr-validation-error{
+
+}
+
+.mepr-price-menu.minimal_horizontal .mepr-price-box-button:last-child{
+  margin-bottom:0;
+}
+
+.mepr-form{
+  input.invalid, 
+  select.invalid, 
+  textarea.invalid, 
+  label.mepr-checkbox-field.invalid, 
+  div.mepr-checkboxes-field.invalid, 
+  div.mepr-radios-field.invalid{
+    color: var(--color__input-text-focus);
+    border-color: var(--color__input-border-focus) !important;
+    background-color: var(--color__input-background-focus) !important;
+    border-width:1px !important;
+  }
+}

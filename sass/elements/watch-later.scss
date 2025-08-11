@@ -1,0 +1,7 @@
+.add-to-watch-later{
+  &.add-watch-later-loading{
+    opacity:0.68;
+    color: var(--color__icon);
+    background-color: var(--color__icon-background);
+  }
+}

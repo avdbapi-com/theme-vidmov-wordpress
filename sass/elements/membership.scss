@@ -1,0 +1,1642 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+button{
+  @include font-family(
+    var(--font__button),
+    var(--font__button-weight),
+    var(--font__button-letter-spacing),
+    var(--font__button-text-transform),
+    var(--font__button-text-decoration),
+    var(--font__button-style),
+    var(--font__button-line-height),
+    var(--font__button-size-px),
+    var(--font__button-size-rem)
+  );
+}
+
+input, select, textarea{
+  @include font-family(
+    var(--font__field),
+    var(--font__field-weight),
+    var(--font__field-letter-spacing),
+    var(--font__field-text-transform),
+    var(--font__field-text-decoration),
+    var(--font__field-style),
+    var(--font__field-line-height),
+    var(--font__field-size-px),
+    var(--font__field-size-rem),
+  );
+}
+
+.is-single-post-main-player{
+  .beeteam368-player-protect{
+    color: var(--color__text-main);
+    .player-banner{
+      cursor:auto;
+      &:before{
+        background:rgba(1,0,1,0.68);
+      }
+    }
+  }
+}
+
+.membership-info-wrapper{
+  width:100%;
+  position:relative;
+  text-align:center;
+  padding: var(--layout_df-padding);
+  @media(max-width: 575px){
+    padding: var(--layout_df-padding-mobile);
+  }
+
+  a.btnn-default,
+  button{
+    margin:4px;
+    @media(max-width: 575px){
+      padding-left:15px;
+      padding-right:15px;
+    }
+  }
+}
+
+.plan-special{
+  display:inline-block;
+  background-color: var(--color__sub);
+  color: #FFFFFF;
+  padding:0 8px;
+  line-height:1.6;
+  @include border-radius(10px);
+
+  margin: 0 5px 5px 0;
+
+  &:last-child{
+    margin-right:0;
+  }
+}
+
+.membership-heading{
+  margin-bottom:3px;
+}
+
+.membership-descriptions{
+  margin-bottom:22px;
+}
+
+.membership-icon{
+  color:#FFFFFF;
+
+  background: rgb(204,61,218);
+  background: -moz-linear-gradient(90deg, rgba(204,61,218,1) 0%, rgba(124,53,226,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(204,61,218,1) 0%, rgba(124,53,226,1) 100%);
+  background: linear-gradient(90deg, rgba(204,61,218,1) 0%, rgba(124,53,226,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cc3dda",endColorstr="#7c35e2",GradientType=1);
+
+  min-width:38px;
+  text-align:center;
+
+  > *{
+    line-height:1;
+  }
+
+  padding:0 8px;
+
+  @include border-radius(3px);
+}
+//custom armember style:
+body.beeteam368-body-control-class{
+
+  .arm_module_forms_container .arm_form_message_container,
+  .arm_member_form_container .arm_form_message_container,
+  .arm_editor_form_fileds_container,
+  .arm_editor_form_fileds_container .arm_form_message_container{
+    width: 100%;
+  }
+
+  .arm_form_message_container .arm_error_msg,
+  .arm_form_message_container .arm_invalid,
+  .arm_form_message_container .error,
+  .arm_form_message_container1 .arm_error_msg,
+  .arm_form_message_container1 .error{
+    @include font-family(
+      var(--font__main),
+      var(--font__main-weight),
+      var(--font__main-letter-spacing),
+      var(--font__main-text-transform),
+      var(--font__main-text-decoration),
+      var(--font__main-style),
+      var(--font__main-line-height),
+      var(--font__main-size-px) !important,
+      var(--font__main-size-rem) !important
+    );
+    margin-bottom:30px;
+  }
+
+  .arm_form_field_submit_button.md-button #arm_form_loader,
+  .arm_form_field_submit_button #arm_form_loader{
+    fill:#FFFFFF;
+  }
+
+  .arm_setup_form_container,
+  .arm_shortcode_form{
+    background: var(--color__post-item-wrap-background);
+  }
+
+  .arm_module_plans_main_container{
+    &:not(:last-child){
+      margin-bottom:40px;
+    }
+  }
+
+  .arm_setup_form_container{
+    .arm_membership_setup_form{
+      width:auto !important;
+      .arm_module_plans_container{
+        padding:0;
+        float:none;
+        border:none;
+        .arm_module_plans_ul{
+          display:block;
+          width:auto;
+          @include flexRowControl;
+          margin:-3px;
+          li.arm_setup_column_item{
+            display:block;
+            width:calc(33.33333333% - 6px);
+            max-width:none;
+            min-width:0;
+            margin:3px;
+            border:1px solid var(--color__hr-background);
+            max-height:100% !important;
+            @include border-radius(5px);
+
+            @media(max-width: 1199px){
+              width:calc(50% - 6px);
+            }
+            @media(max-width: 767px){
+              width:100% !important;
+              margin:0;
+              margin-bottom:20px;
+              &:last-child{
+                margin-bottom:0;
+              }
+            }
+
+            .arm_module_plan_option{
+              margin:0;
+              padding:25px;
+              border:none;
+              @media(max-width: 767px){
+                padding:20px;
+              }
+              > *{
+                margin: 0 0 20px 0;
+                padding: 0 0 0 43px !important;
+                &:last-child{
+                  margin-bottom:0;
+                }
+              }
+
+              .arm_module_plan_name,
+              .arm_module_plan_price,
+              .arm_module_plan_price_type,
+              .arm_module_plan_description{
+                padding:0;
+                min-height:0;
+                height:auto !important;
+              }
+
+              .arm_module_plan_name,
+              .arm_module_plan_price,
+              .arm_module_plan_price_type{
+                @include font-family(
+                  var(--font__heading),
+                  var(--font__heading-weight),
+                  var(--font__heading-letter-spacing),
+                  var(--font__heading-text-transform),
+                  var(--font__heading-text-decoration),
+                  var(--font__heading-style),
+                  var(--font__heading-line-height),
+                  var(--font__heading-size-px) !important,
+                  var(--font__heading-size-rem) !important
+                );
+
+                color: var(--color__text-heading) !important;
+              }
+
+              .arm_module_plan_name{
+                font-size: var(--font__h2-font-size-px) !important;
+                font-size: var(--font__h2-font-size-rem) !important;
+              }
+
+              .arm_module_plan_price,
+              .arm_module_plan_price_type{
+                font-size: var(--font__h1-font-size-px) !important;
+                font-size: var(--font__h1-font-size-rem) !important;
+              }
+
+              .arm_module_plan_description{
+                color: var(--color__text-main);
+                @include font-family(
+                  var(--font__main),
+                  var(--font__main-weight),
+                  var(--font__main-letter-spacing),
+                  var(--font__main-text-transform),
+                  var(--font__main-text-decoration),
+                  var(--font__main-style),
+                  var(--font__main-line-height),
+                  var(--font__main-size-px) !important,
+                  var(--font__main-size-rem) !important
+                );
+              }
+
+              .arm_plan_name_box{
+                position:relative;
+              }
+
+              .arm_setup_check_circle{
+                left:0;
+                top:50%;
+                margin-top:-12px;
+              }
+
+            }
+          }
+
+          .arm_plan_separator{
+            display:none !important;
+          }
+        }
+      }
+    }
+  }
+
+  @mixin css_form_armember{
+
+    .arm_module_forms_container .arm_form,
+    .arm-form-container arm_form.arm-default-form:not(.arm_admin_member_form),
+    .arm_update_card_form_container .arm_form,
+    .arm_admin_member_form .arm_editor_form_fileds_wrapper{
+      padding:0 !important;
+    }
+
+    .arm_form .arm-df__form-group{
+      padding:0 !important;
+    }
+
+    .arm_form_inner_container{
+      padding:0 !important;
+    }
+    .arm_form_label_wrapper{
+      padding:0;
+      width:auto;
+      margin-bottom:3px;
+    }
+
+    .arm_form_field_container{
+      margin-bottom:23px !important;
+    }
+
+    .required_tag{
+      left:100%;
+      top:2px;
+      margin-left:5px !important;
+      @media(max-width: 480px){
+        left:auto;
+        right:0;
+        margin-left:0 !important;
+      }
+    }
+
+    .arm_strength_meter_block_container{
+      .arm_strength_meter_block{
+        border-color:var(--color__post-item-wrap-background);
+        &[style="background: rgb(221, 221, 221);"]{
+          background: var(--color__icon-background) !important;
+        }
+      }
+    }
+
+    .arm_registration_link a,
+    .arm_forgotpassword_link a{
+      color: var(--color__link) !important;
+    }
+
+    .arm_registration_link,
+    .arm_forgotpassword_link,
+    .arm_pass_strength_meter,
+    .arm_close_account_message,
+    .arm_forgot_password_description,
+    md-radio-button,
+    md-checkbox{
+      color: var(--color__text-main);
+    }
+
+    .arm-df__form-field-wrap{
+
+      .arm-df__form-control.arm-df__fc--validation__wrap,
+      .arm-df__form-control.arm_invalid,
+      .arm-df__form-group_select.error .arm__dc--head{
+        border-color: var(--color__input-border-focus) !important;
+      }
+
+      .arm-df__dropdown-control dt.arm__dc--head,
+      input:not([type='checkbox'], [type='radio'], .arm-df__dc--head__autocomplete),
+      textarea.arm-df__form-control,
+      select,
+      .arm-df__dropdown-control dt.arm__dc--head{
+        color: var(--color__input-text);
+        border: 1px solid var(--color__input-border);
+        background-color: var(--color__input-background) !important;
+        padding: 6px 15px;
+        outline: none;
+        -webkit-appearance: none;
+        height:auto;
+
+        &:focus {
+          color: var(--color__input-text-focus);
+          border-color: var(--color__input-border-focus);
+          background-color: var(--color__input-background-focus) !important;
+        }
+
+        @include font-family(
+          var(--font__field) !important,
+          var(--font__field-weight) !important,
+          var(--font__field-letter-spacing) !important,
+          var(--font__field-text-transform) !important,
+          var(--font__field-text-decoration) !important,
+          var(--font__field-style) !important,
+          var(--font__field-line-height) !important,
+          var(--font__field-size-px) !important,
+          var(--font__field-size-rem) !important,
+        );
+        @include border-radius(3px);
+        @include transiton-builder(border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, width 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-size 0.3s ease-in-out, background-position 0.3s ease-in-out);
+
+        &.ng-invalid:not(.ng-untouched){
+          border-color: var(--color__input-border-focus) !important;
+        }
+      }
+    }
+
+    .arm_form_input_wrapper{
+      padding:0;
+      md-input-container{
+        padding:0;
+        margin:0;
+        .md-input,
+        md-select-value{
+          color: var(--color__input-text);
+          border: 1px solid var(--color__input-border);
+          background-color: var(--color__input-background) !important;
+          padding: 6px 15px;
+          outline: none;
+          -webkit-appearance: none;
+          height:auto;
+
+          &:focus {
+            color: var(--color__input-text-focus);
+            border-color: var(--color__input-border-focus);
+            background-color: var(--color__input-background-focus) !important;
+          }
+
+          @include font-family(
+            var(--font__field) !important,
+            var(--font__field-weight) !important,
+            var(--font__field-letter-spacing) !important,
+            var(--font__field-text-transform) !important,
+            var(--font__field-text-decoration) !important,
+            var(--font__field-style) !important,
+            var(--font__field-line-height) !important,
+            var(--font__field-size-px) !important,
+            var(--font__field-size-rem) !important,
+          );
+          @include border-radius(3px);
+          @include transiton-builder(border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, width 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-size 0.3s ease-in-out, background-position 0.3s ease-in-out);
+
+          &.ng-invalid:not(.ng-untouched){
+            border-color: var(--color__input-border-focus) !important;
+          }
+
+        }
+
+        &.md-input-invalid.md-input-focused label,
+        &.md-default-theme:not(.md-input-invalid).md-input-focused label,
+        &.md-default-theme.md-input-invalid.md-input-focused label,
+        &:not(.md-input-invalid).md-input-focused label,
+        &:not(.md-input-invalid).md-input-has-value label{
+          color: var(--color__text-heading);
+          word-break: break-word;
+          @include font-family(
+            var(--font__heading),
+            var(--font__heading-weight),
+            var(--font__heading-letter-spacing),
+            var(--font__heading-text-transform),
+            var(--font__heading-text-decoration),
+            var(--font__heading-style),
+            var(--font__heading-line-height),
+            var(--font__heading-size-px),
+            var(--font__heading-size-rem)
+          );
+        }
+
+
+      }
+    }
+
+    .arm-df__form-group{
+
+      margin-bottom:25px !important;
+
+      .arm_form_label_wrapper{
+        display:inline-block;
+        margin-bottom:7px;
+      }
+
+      .arm-df__field-label .arm-df__label-asterisk{
+        left:100%;
+        right:auto;
+      }
+
+      .arm-df__field-label .arm-df__label-asterisk+label.arm_form_field_label_text{
+        padding:0;
+      }
+
+    }
+
+    .arm_module_gateway_fields{
+      .arm-default-form{
+        padding:0 !important;
+        float:none;
+        background-color:transparent;
+        width:100%;
+        .arm-control-group{
+          padding:0 !important;
+
+        }
+      }
+    }
+
+    .arm_form_label_wrapper .arm-df__label-asterisk,
+    .arm-df__form-field-wrap label,
+    .arm-df__form-field .arm-df__radio .arm-df__fc-radio--label,
+    .arm-df__form-field .arm-df__checkbox .arm-df__fc-checkbox--label,
+
+    .arm_form_field_label_text,
+    .arm_member_form_field_label .arm_form_field_label_text,
+    .arm_member_form_field_description .arm_form_field_description_text,
+    .arm_form_label_wrapper .required_tag,
+    .arm_form_input_container label{
+      float:none !important;
+      color: var(--color__text-heading);
+      word-break: break-word;
+      @include font-family(
+        var(--font__heading),
+        var(--font__heading-weight),
+        var(--font__heading-letter-spacing),
+        var(--font__heading-text-transform),
+        var(--font__heading-text-decoration),
+        var(--font__heading-style),
+        var(--font__heading-line-height),
+        var(--font__h5-font-size-px),
+        var(--font__h5-font-size-rem)
+      );
+    }
+
+    .arm_error_msg_box {
+      margin-right: 0;
+      margin-left: 0;
+      left:auto;
+      right:0;
+      .arm_error_msg{
+        background:var(--color__main);
+        border:none;
+
+        padding:5px 15px !important;
+
+        @include border-radius(3px);
+
+        @include font-family(
+          var(--font__main),
+          var(--font__main-weight),
+          var(--font__main-letter-spacing),
+          var(--font__main-text-transform),
+          var(--font__main-text-decoration),
+          var(--font__main-style),
+          var(--font__main-line-height),
+          var(--font__main-size-px),
+          var(--font__main-size-rem)
+        );
+      }
+    }
+
+    .arm_forgot_password_description{
+      padding:0;
+    }
+
+    .arm_forgot_password_description,
+    .arm_form_message_container .arm_success_msg,
+    .arm_form_message_container .arm_error_msg,
+    .arm_form_message_container1 .arm_success_msg,
+    .arm_form_message_container1 .arm_success_msg1,
+    .arm_form_message_container1 .arm_error_msg,
+    .arm_form_message_container .arm_success_msg a{
+      @include font-family(
+        var(--font__main),
+        var(--font__main-weight),
+        var(--font__main-letter-spacing),
+        var(--font__main-text-transform),
+        var(--font__main-text-decoration),
+        var(--font__main-style),
+        var(--font__main-line-height),
+        var(--font__main-size-px),
+        var(--font__main-size-rem)
+      );
+    }
+
+    .arm_msg_pos_bottom .arm_error_msg .arm_error_box_arrow{
+      border:none;
+      margin-left:-9px;
+      &:after{
+        border-width: 10px 8px;
+        margin-left:0;
+        border-color:transparent;
+        top:-10px;
+        border-bottom-color: var(--color__main) !important;
+      }
+    }
+
+    md-radio-button.md-default-theme.md-checked .md-off,
+    md-radio-button.md-default-theme .md-off,
+    md-radio-button.md-checked .md-off,
+    md-radio-button .md-off,
+    md-checkbox.md-default-theme .md-icon,
+    md-checkbox .md-icon{
+      border: 1px solid var(--color__input-border);
+    }
+
+    md-radio-button.md-default-theme .md-on,
+    md-radio-button .md-on,
+    md-checkbox.md-default-theme.md-checked .md-icon,
+    md-checkbox.md-checked .md-icon{
+      background-color:var(--color__main) !important;
+    }
+
+    .arm_shortcode_form.arm_form_layout_iconic .arm_msg_pos_bottom .arm_error_msg_box,
+    .arm_shortcode_form.arm_form_layout_rounded .arm_msg_pos_bottom .arm_error_msg_box{
+      left:auto;
+      right:0;
+      margin-right:0;
+      margin-left:0;
+    }
+
+    input[type=checkbox].arm-df__form-control--is-checkbox,
+    input[type=radio].arm-df__form-control--is-radio{
+      border-color: var(--color__input-border) !important;
+      background: var(--color__post-item-wrap-background) !important;
+    }
+
+
+    input[type=checkbox].arm-df__form-control--is-checkbox:checked,
+    input[type=radio].arm-df__form-control--is-radio:checked,
+    .arm_membership_setup_form input[type=checkbox].arm-df__form-control--is-checkbox:checked,
+    .arm_membership_setup_form input[type=radio].arm-df__form-control--is-radio:checked,
+    .arm_membership_setup_form.arm_materialize_form .arm-df__checkbox input[type='checkbox']:checked + label:after,
+    .arm_membership_setup_form.arm_materialize_form .arm-df__checkbox input[type='checkbox']:checked:focus + label:after,
+    .arm_membership_setup_form.arm_materialize_form .arm-df__radio input[type='radio']:checked + label:after,
+    .arm_membership_setup_form.arm_materialize_form .arm-df__radio input[type='radio']:checked:focus + label:after{
+      border-color: var(--color__main) !important;
+      background: var(--color__post-item-wrap-background) !important;
+    }
+
+    input[type=radio].arm-df__form-control--is-radio:checked::after{
+      background: var(--color__main) !important;
+    }
+
+    .arm_radio_wrapper input[type=radio]+span{
+      border-color: var(--color__input-border) !important;
+    }
+
+    .arm_setup_check_circle,
+    .arm_radio_wrapper input[type=radio]:checked+span{
+      color: var(--color__main) !important;
+      border-color: var(--color__main) !important;
+      background: var(--color__post-item-wrap-background) !important;
+    }
+
+    .arm_radio_wrapper input[type=radio]:checked+span:before{
+      background: var(--color__main) !important;
+    }
+
+    .arm_module_gateways_container .arm_module_gateway_option,
+    .arm_module_payment_cycle_container .arm_module_payment_cycle_option{
+      border-color: var(--color__hr-background);
+    }
+
+    .arm_setup_column_item:hover .arm_module_plan_option,
+    .arm_setup_column_item.arm_active .arm_module_plan_option,
+    .arm_setup_column_item:hover .arm_module_gateway_option,
+    .arm_setup_column_item.arm_active .arm_module_gateway_option,
+    .arm_setup_column_item:hover .arm_module_payment_cycle_option,
+    .arm_setup_column_item.arm_active .arm_module_payment_cycle_option{
+      border-color: var(--color__main);
+    }
+
+    .arm_form_field_container_textarea{
+      textarea{
+        height:150px !important;
+      }
+    }
+
+    md-checkbox.md-checked .md-icon:after{
+      left: 7px;
+      top: 1px;
+      width: 5px;
+      height: 12px;
+    }
+
+    .arm_setup_submit_btn_main_wrapper{
+      margin-top:40px;
+    }
+
+    .arm-df__form-field-wrap_submit .arm-df__form-control-submit-btn,
+    .arm-df__form-field-wrap_submit button.arm-df__form-control-submit-btn,
+    .arm_form_field_submit_button.md-button,
+    .arm_form_field_submit_button{
+      background-image: none;
+      text-shadow: none;
+      vertical-align: top;
+      display: inline-block;
+      outline: none;
+      margin: 0;
+      cursor: pointer;
+      text-align: center;
+      text-decoration:none;
+
+      -webkit-tap-highlight-color: transparent;
+
+      background: var(--color__button-background) !important;
+      color: var(--color__button-text);
+      border: 1px solid var(--color__button-border) !important;
+
+      padding: 6px 25px 8px 25px;
+      min-height:0;
+      max-width:none;
+      width:auto;
+
+      @include border-radius(3px);
+      @include transiton-builder(color 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.3s, visibility 0.3s, width 0.3s, box-shadow 0.3s);
+      @include prefixer(box-shadow, none, spec webkit);
+      @include prefixer(user-select, none, spec webkit);
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration:none;
+        background-color: var(--color__button-background-hover) !important;
+        color: var(--color__button-text-hover) !important;
+        border: 1px solid var(--color__button-border-hover) !important;
+      }
+
+      @include font-family(
+        var(--font__button),
+        var(--font__button-weight),
+        var(--font__button-letter-spacing),
+        var(--font__button-text-transform),
+        var(--font__button-text-decoration),
+        var(--font__button-style),
+        var(--font__button-line-height),
+        var(--font__button-size-px),
+        var(--font__button-size-rem)
+      );
+    }
+  }
+
+  .arm-form-container,
+  .arm_member_form_container{
+    .arm_form{
+      &.arm_form_layout_iconic{
+        margin:0;
+        width:auto;
+        background:transparent;
+
+        @include css_form_armember;
+
+        .arm_form_field_container_textarea{
+          textarea{
+            height:150px !important;
+          }
+        }
+
+        .arm_forgotpassword_link{
+          margin:20px 0 0 0 !important;
+          float:left;
+          width:auto;
+          padding:0;
+          @include font-family(
+            var(--font__main),
+            var(--font__main-weight),
+            var(--font__main-letter-spacing),
+            var(--font__main-text-transform),
+            var(--font__main-text-decoration),
+            var(--font__main-style),
+            var(--font__main-line-height),
+            var(--font__main-size-px) !important,
+            var(--font__main-size-rem) !important
+          );
+          &+.arm_socialicons_bottom{
+            margin:20px 0 0 0 !important;
+            float:right;
+            width:auto;
+            padding:0;
+            .arm_registration_link{
+              @include font-family(
+                var(--font__main),
+                var(--font__main-weight),
+                var(--font__main-letter-spacing),
+                var(--font__main-text-transform),
+                var(--font__main-text-decoration),
+                var(--font__main-style),
+                var(--font__main-line-height),
+                var(--font__main-size-px) !important,
+                var(--font__main-size-rem) !important
+              );
+            }
+          }
+
+          @media(max-width: 767px){
+            width:100%;
+            float:none;
+            text-align: center;
+            &+.arm_socialicons_bottom{
+              width:100%;
+              float:none;
+            }
+          }
+        }
+
+      }
+      &.arm_shortcode_form{
+        .arm-df__heading-text,
+        .arm_form_heading_container{
+          display:none;
+        }
+      }
+    }
+  }
+
+  .arm_setup_form_container{
+    margin-top:20px;
+  }
+
+  .arm_membership_setup_form{
+    @include css_form_armember;
+
+    .arm_current_user_plan_info{
+      padding:0;
+      margin-bottom:30px;
+    }
+
+    .arm_setup_submit_btn_wrapper{
+      padding:0;
+    }
+
+    .arm_disabled_submission_container{
+      margin:0;
+    }
+
+    .arm_module_box{
+      padding:0;
+    }
+    .arm_module_forms_container{
+      border:none;
+    }
+    .arm_form{
+      width:100% !important;
+      .arm-df__heading-text,
+      .arm_form_heading_container{
+        display:none;
+      }
+    }
+
+    .arm_setup_form_title,
+    .arm_setup_section_title_wrapper{
+      color: var(--color__text-heading) !important;
+      margin:0 0 23px 0 !important;
+      padding-left:0 !important;
+      @include font-family(
+        var(--font__heading),
+        var(--font__heading-weight),
+        var(--font__heading-letter-spacing),
+        var(--font__heading-text-transform),
+        var(--font__heading-text-decoration),
+        var(--font__heading-style),
+        var(--font__heading-line-height),
+        var(--font__h5-font-size-px),
+        var(--font__h5-font-size-rem)
+      );
+      font-size: var(--font__h2-font-size-px) !important;
+      font-size: var(--font__h2-font-size-rem) !important;
+    }
+
+    .arm_setup_summary_text_container .arm_setup_summary_text,
+    .arm_payment_mode_label{
+      color: var(--color__text-main);
+      @include font-family(
+        var(--font__main),
+        var(--font__main-weight),
+        var(--font__main-letter-spacing),
+        var(--font__main-text-transform),
+        var(--font__main-text-decoration),
+        var(--font__main-style),
+        var(--font__main-line-height),
+        var(--font__main-size-px) !important,
+        var(--font__main-size-rem) !important
+      );
+    }
+
+    .arm_setup_gatewaybox_main_wrapper{
+      margin-top:20px;
+      .arm_bank_transfer_note_container{
+        margin: 1em 0;
+
+        @include font-family(
+          var(--font__main),
+          var(--font__main-weight),
+          var(--font__main-letter-spacing),
+          var(--font__main-text-transform),
+          var(--font__main-text-decoration),
+          var(--font__main-style),
+          var(--font__main-line-height),
+          var(--font__main-size-px) !important,
+          var(--font__main-size-rem) !important
+        );
+
+        p:first-child{
+          margin-top:0;
+        }
+        p:last-child{
+          margin-bottom:0;
+        }
+      }
+    }
+
+    .arm_payment_mode_main_wrapper{
+      margin-top:20px;
+      border-bottom:1px solid var(--color__hr-background);
+    }
+
+    .arm_payment_mode_wrapper{
+      border:none;
+      padding-bottom:32px;
+      .arm_radio_outer_wrapper{
+        margin:0 30px 0 0 !important;
+      }
+      .arm_radio_wrapper{
+        margin:0 8px 0 0;
+        top:5px;
+      }
+    }
+
+    .arm_setup_summary_text{
+      margin-top:35px;
+      >div:first-child{
+        @include font-family(
+          var(--font__heading),
+          var(--font__heading-weight),
+          var(--font__heading-letter-spacing),
+          var(--font__heading-text-transform),
+          var(--font__heading-text-decoration),
+          var(--font__heading-style),
+          var(--font__heading-line-height) !important,
+          var(--font__h5-font-size-px),
+          var(--font__h5-font-size-rem)
+        );
+
+        font-size: var(--font__h4-font-size-px) !important;
+        font-size: var(--font__h4-font-size-rem) !important;
+      }
+
+      >div:not(:first-child){
+        display:inline;
+      }
+    }
+
+    .arm_plan_skin3{
+      .arm_module_plan_option .arm_setup_check_circle i,
+      .arm_module_plan_option:hover .arm_setup_check_circle i{
+        color: var(--color__main) !important;
+      }
+
+      .arm_module_plan_option .arm_setup_check_circle{
+        border-color: var(--color__main) !important;
+        background: var(--color__post-item-wrap-background) !important;
+      }
+    }
+
+    .arm_module_gateways_container.arm_module_box,
+    .arm_module_payment_cycle_container.arm_module_box{
+
+      border:none;
+
+      .arm_setup_column_item{
+        margin:0 0 10px 0;
+        &:last-child{
+          margin-bottom:0;
+        }
+        .arm_module_gateway_option{
+          @include border-radius(3px);
+
+          padding: 15px 15px;
+
+          .arm_module_gateway_name{
+            color: var(--color__text-heading) !important;
+            height:auto !important;
+            vertical-align: top;
+            @include font-family(
+              var(--font__heading),
+              var(--font__heading-weight),
+              var(--font__heading-letter-spacing),
+              var(--font__heading-text-transform),
+              var(--font__heading-text-decoration),
+              var(--font__heading-style),
+              var(--font__heading-line-height) !important,
+              var(--font__h5-font-size-px),
+              var(--font__h5-font-size-rem)
+            );
+            font-size: var(--font__h4-font-size-px) !important;
+            font-size: var(--font__h4-font-size-rem) !important;
+          }
+        }
+      }
+    }
+
+    .arm_setup_submit_btn_main_wrapper{
+      .arm_form_field_container{
+        margin: 40px 0 0 0 !important;
+      }
+      .arm_disabled_submission_container{
+        margin-top:40px;
+      }
+    }
+  }
+
+  .arm_user_current_membership_list_table th,
+  table.arm_user_login_history_list_table th,
+  table.arm_user_transaction_list_table th{
+    background-color: var(--color__body-background);
+    border:1px solid var(--color__hr-background) !important;
+    color: var(--color__text-heading) !important;
+    @include font-family(
+      var(--font__heading) !important,
+      var(--font__heading-weight) !important,
+      var(--font__heading-letter-spacing) !important,
+      var(--font__heading-text-transform) !important,
+      var(--font__heading-text-decoration) !important,
+      var(--font__heading-style) !important,
+      var(--font__heading-line-height) !important,
+      var(--font__h5-font-size-px) !important,
+      var(--font__h5-font-size-rem) !important
+    );
+    text-align:left;
+    padding:13px 20px 12px 20px !important;
+  }
+  table.arm_user_current_membership_list_table td,
+  table.arm_user_login_history_list_table td,
+  table.arm_user_transaction_list_table td{
+    text-align:left;
+    border:1px solid var(--color__hr-background) !important;
+    padding:13px 20px 12px 20px !important;
+    color: var(--color__text-main) !important;
+    @include font-family(
+      var(--font__main) !important,
+      var(--font__main-weight) !important,
+      var(--font__main-letter-spacing) !important,
+      var(--font__main-text-transform) !important,
+      var(--font__main-text-decoration) !important,
+      var(--font__main-style) !important,
+      var(--font__main-line-height) !important,
+      var(--font__main-size-px) !important,
+      var(--font__main-size-rem) !important
+    );
+  }
+
+  .arm_current_membership_container .arm_current_membership_heading_main,
+  .arm_transactions_container .arm_transactions_heading_main{
+    color: var(--color__text-heading) !important;
+    padding:0;
+    @include font-family(
+      var(--font__heading) !important,
+      var(--font__heading-weight) !important,
+      var(--font__heading-letter-spacing) !important,
+      var(--font__heading-text-transform) !important,
+      var(--font__heading-text-decoration) !important,
+      var(--font__heading-style) !important,
+      var(--font__heading-line-height) !important,
+      var(--font__h4-font-size-px) !important,
+      var(--font__h4-font-size-rem) !important
+    );
+  }
+
+  .arm_membership_setup_form md-radio-button,
+  .arm_membership_setup_form md-checkbox{
+    @include font-family(
+      var(--font__main) !important,
+      var(--font__main-weight) !important,
+      var(--font__main-letter-spacing) !important,
+      var(--font__main-text-transform) !important,
+      var(--font__main-text-decoration) !important,
+      var(--font__main-style) !important,
+      var(--font__main-line-height) !important,
+      var(--font__main-size-px) !important,
+      var(--font__main-size-rem) !important
+    );
+  }
+
+  .arm_transactions_container .arm_paging_wrapper .arm_paging_info,
+  .arm_transactions_container .arm_paging_wrapper .arm_paging_links a,
+  .arm_form_close_account .arm_close_account_message,
+  .arm_form_close_account .arm_forgot_password_description{
+    color: var(--color__text-main) !important;
+    padding:0;
+    @include font-family(
+      var(--font__main) !important,
+      var(--font__main-weight) !important,
+      var(--font__main-letter-spacing) !important,
+      var(--font__main-text-transform) !important,
+      var(--font__main-text-decoration) !important,
+      var(--font__main-style) !important,
+      var(--font__main-line-height) !important,
+      var(--font__main-size-px) !important,
+      var(--font__main-size-rem) !important
+    );
+  }
+
+  .arm_paging_wrapper .arm_page_numbers.current,
+  .arm_paging_wrapper .arm_page_numbers:focus,
+  .arm_paging_wrapper .arm_page_numbers:hover{
+    border-color:var(--color__main);
+  }
+
+  .arm_paging_wrapper .arm_page_numbers.arm_next.current,
+  .arm_paging_wrapper .arm_page_numbers.arm_prev.current{
+    border-color:transparent;
+  }
+
+  .arm_paging_wrapper a.arm_page_numbers.arm_next{
+    background:transparent;
+    line-height: 30px !important;
+    &:before{
+      font-family: "Font Awesome 5 Free";
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-weight: 900;
+      content:'\f054';
+    }
+  }
+  .arm_paging_wrapper a.arm_page_numbers.arm_prev{
+    background:transparent;
+    line-height: 30px !important;
+    &:before{
+      font-family: "Font Awesome 5 Free";
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-weight: 900;
+      content:'\f053';
+    }
+  }
+
+  .arm_user_current_membership_list_table,
+  .arm_user_login_history_list_table,
+  .arm_user_transaction_list_table{
+    border:none;
+    border-collapse: collapse !important;
+  }
+
+  .arm_close_account_container{
+    margin-top:30px;
+  }
+
+  .arm_cm_cancel_btn_div,
+  .arm_cm_renew_btn_div,
+  .arm_cm_update_btn_div{
+    text-align:left;
+    margin: 0 10px 5px 0;
+    width:auto;
+  }
+
+  .arm_current_membership_container .arm_current_membership_list_item .arm_cancel_subscription_button,
+  .arm_current_membership_container .arm_current_membership_list_item .arm_renew_subscription_button,
+  .arm_current_membership_container .arm_current_membership_list_item .arm_update_card_button_style,
+  .arm_transactions_container .arm_transaction_list_item .arm_view_invoice_button{
+    @include font-family(
+      var(--font__button) !important,
+      var(--font__button-weight) !important,
+      var(--font__button-letter-spacing) !important,
+      var(--font__button-text-transform) !important,
+      var(--font__button-text-decoration) !important,
+      var(--font__button-style) !important,
+      var(--font__button-line-height) !important,
+      var(--font__button-size-px) !important,
+      var(--font__button-size-rem) !important
+    );
+
+    padding:3px 10px;
+  }
+
+  .arm_close_account_form_container{
+    width:100%;
+  }
+
+  @media(max-width: 768px){
+    .arm_current_membership_container table tr,
+    .arm_login_history_container table tr,
+    .arm_transactions_container table tr{
+      border:none;
+    }
+    table.arm_user_current_membership_list_table td,
+    table.arm_user_login_history_list_table td,
+    table.arm_user_transaction_list_table td{
+      border: 1px solid var(--color__hr-background) !important;
+    }
+    .arm_current_membership_container table tr,
+    .arm_login_history_container table tr,
+    .arm_transactions_container table tr{
+      margin-bottom:30px;
+    }
+  }
+
+  .arm-default-form:not(.arm_admin_member_form){
+    background-color:transparent;
+  }
+}
+
+body.beeteam368-body-control-class.beeteam368-armember-pro,
+body.beeteam368-body-control-class.beeteam368-armember-lite-4{
+  .arm_setup_form_container{
+    .arm_membership_setup_form .arm_module_plans_container .arm_module_plans_ul li.arm_setup_column_item.arm_plan_skin1 .arm_module_plan_option>*{
+      padding: 0 0 0 0 !important;
+    }
+
+    .arm_plan_skin1.arm_setup_column_item .arm_module_plan_option .arm_module_plan_price_type,
+    .arm_plan_skin1.arm_setup_column_item .arm_module_plan_option .arm_module_plan_price_type .arm_module_plan_price{
+      color: var(--color__icon) !important;      
+      background-color: var(--color__icon-background) !important;
+      border-color: transparent !important;
+      @include border-radius(3px);
+    }
+
+    .arm_setup_form_1 .arm_plan_skin1.arm_setup_column_item:hover .arm_module_plan_option .arm_module_plan_price_type,
+    .arm_setup_form_1 .arm_plan_skin1.arm_setup_column_item.arm_active .arm_module_plan_option .arm_module_plan_price_type,
+    .arm_setup_form_1 .arm_plan_skin1.arm_setup_column_item:hover .arm_module_plan_option .arm_module_plan_price_type .arm_module_plan_price,
+    .arm_setup_form_1 .arm_plan_skin1.arm_setup_column_item.arm_active .arm_module_plan_option .arm_module_plan_price_type .arm_module_plan_price{        
+      color: var(--color__button-text) !important;    
+      background-color: var(--color__button-background)  !important;      
+      border-color: transparent !important;
+    }
+      
+    .arm_plan_skin1.arm_setup_column_item .arm_module_plan_option .arm_module_plan_price_type .arm_module_plan_price{
+        padding-top:6px !important;
+        padding-bottom:6px !important;
+    }
+  }
+
+  .arm-form-container form.arm_form{
+    padding:0 !important;
+  }
+
+  .arm-form-container form.arm_form .arm-control-group{
+    padding:0 !important;
+  }
+
+  .arm-df__form-group_rememberme .arm-df__form-field-wrap.arm-df__form-field-wrap_rememberme{
+    padding:0;
+  }
+
+  .arm-form-container form.arm_form .arm-df__heading{
+    display:none;
+  }
+
+  .arm_module_forms_container .arm_form_101, 
+  .arm-form-container .arm_form_101.arm-default-form:not(.arm_admin_member_form), 
+  .arm_update_card_form_container .arm_form_101, 
+  .arm_admin_member_form .arm_editor_form_fileds_wrapper,
+  .arm_module_forms_container .arm_form_close_account, 
+  .arm-form-container .arm_form_close_account.arm-default-form:not(.arm_admin_member_form), 
+  .arm_update_card_form_container .arm_form_close_account{
+	  border:none !important;
+  }
+
+  .arm-default-form .arm_module_box.arm_module_coupons_container, 
+  .arm-default-form .arm_module_box.arm_module_forms_container, 
+  .arm-default-form .arm_module_box.arm_module_gateways_container, 
+  .arm-default-form .arm_module_box.arm_module_plans_container, 
+  .arm-default-form .arm_module_forms_container{
+    border-bottom: none;
+  }
+
+  .arm_setup_couponbox_main_wrapper{
+    margin-top:25px;
+  }
+
+  .arm-df__form-group{
+    padding:0;
+  }
+
+  .arm_apply_coupon_container .arm_apply_coupon_btn, 
+  .arm_module_coupons_container .arm_apply_coupon_container .arm-df__form-group.arm_coupon_submit_wrapper .arm_apply_coupon_btn{
+    padding-top:9px;
+    padding-bottom:9px;
+    margin-left:10px;
+  }
+}
+//custom armember style
+
+/*Paid Membership Pro*/
+form.pmpro_form input[type=text], 
+form.pmpro_form input[type=password], 
+form.pmpro_form input[type=email], 
+form.pmpro_form input[type=number], 
+form.pmpro_form textarea, 
+form.pmpro_form select, 
+#loginform input[type=text], 
+#loginform input[type=password]{
+  max-width: none;
+  width: 100%;
+}
+
+form.pmpro_form label, 
+#loginform label{
+  margin-bottom:7px;
+}
+
+form.pmpro_form .pmpro_checkout-fields .pmpro_checkout-field{
+  position: relative;
+}
+
+form.pmpro_form .pmpro_checkout-fields .pmpro_checkout-field .pmpro_asterisk{
+  display: block;
+  position: absolute;
+  right:0;
+  top:0;
+}
+
+form.pmpro_form .pmpro_checkout-fields div, 
+#loginform p{
+  margin-bottom:22px;
+}
+
+.pmpro_checkout-field #ExpirationMonth,
+.pmpro_checkout-field #ExpirationYear{
+  width:100px;
+  margin-right:10px;
+}
+
+.pmpro_checkout-field #ExpirationYear{
+  margin-left:10px;
+}
+
+.pmpro_checkout-field #CVV{
+  width:100px;
+}
+
+form.pmpro_form .lite{
+  color: var(--color__text-main);
+  margin-top:7px;
+}
+
+.pmpro_price_part-total{
+  border-color:var(--color__hr-background);
+  margin-top:15px;
+  padding-top:15px;
+}
+
+.pmpro_btn,
+a.pmpro_btn, 
+.pmpro_btn:link, 
+.entry-content a.pmpro_btn,
+.pmpro_content_message a, 
+.pmpro_content_message a:link,
+.pmpro_checkout .pmpro_btn,
+.pmpro_content_message a,
+.pmpro_btn.pmpro_btn-cancel,
+.entry-content a.pmpro_btn.pmpro_btn-cancel{
+  border: none;
+  background-image: none;
+  text-shadow: none;
+  vertical-align: top;
+  display: inline-block;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration:none;
+
+  -webkit-tap-highlight-color: transparent;
+
+  background-color: var(--color__button-background);
+  color: var(--color__button-text);
+  border: 1px solid var(--color__button-border);
+
+  padding: 6px 25px;
+
+  &:visited{
+    color: var(--color__button-text);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration:none;
+    background-color: var(--color__button-background-hover);
+    color: var(--color__button-text-hover);
+    border: 1px solid var(--color__button-border-hover);
+  }
+
+  @include border-radius(3px);
+  @include transiton-builder(color 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.3s, visibility 0.3s, width 0.3s, box-shadow 0.3s);
+  @include prefixer(box-shadow, none, spec webkit);
+  @include prefixer(user-select, none, spec webkit);
+
+  @include font-family(
+    var(--font__button),
+    var(--font__button-weight),
+    var(--font__button-letter-spacing),
+    var(--font__button-text-transform),
+    var(--font__button-text-decoration),
+    var(--font__button-style),
+    var(--font__button-line-height),
+    var(--font__button-size-px),
+    var(--font__button-size-rem)
+  );
+}
+
+.pmpro_message{
+	@include border-radius(3px);
+	margin:0 0 30px 0;
+	padding:8px 20px;
+
+	a{
+		color:#000000;
+		&:hover{
+			color:$color__main;
+		}
+	}
+}
+
+#pmpro_account .pmpro_box{
+  border-color:var(--color__hr-background);
+  padding:30px 0 30px 0;
+}
+
+#pmpro_message_bottom{
+  margin-bottom:30px;
+}
+
+@media (max-width: 768px){
+  form.pmpro_form input[type=text].input, 
+  form.pmpro_form input[type=password].input, 
+  .pmpro_login_wrap form#loginform input[type=text].input, 
+  .pmpro_login_wrap form#loginform input[type=password].input {
+    width: 100%;
+  }
+}
+
+.pmpro_checkout h2 span.pmpro_checkout-h2-name{
+  margin-right:0;
+}
+/*paid Membership Pro*/
+
+/*Paid Membership Pro New Design*/
+body.pmpro-variation_1{
+
+  /*header.single-page-title{
+    display:none;
+  }*/
+
+  &.pmpro-levels,
+  &.pmpro-account,
+  &.pmpro-billing,
+  &.pmpro-cancel,
+  &.pmpro-invoice,
+  &.pmpro-checkout,
+  &.pmpro-confirmation,
+  &.pmpro-member-profile-edit{
+    .global-post-page-content > *{
+      padding:0;
+      background-color:transparent;
+      @include prefixer(box-shadow, none, spec webkit);
+    }
+  }
+  
+  .pmpro {
+    color: var(--color__text-main);
+    .pmpro_card{
+      background-color:transparent;
+      border:none;
+      @include prefixer(box-shadow, none, spec webkit);     
+    }
+    .pmpro_card_content{
+      padding: var(--layout_df-padding);
+      background-color: var(--color__post-item-wrap-background);
+      @include border-radius(7px);
+      @include prefixer(box-shadow, 0px 0px 28px 0px var(--color__global-box-content-shadow), spec webkit);
+
+      @media(max-width:575px){
+        padding: var(--layout_df-padding-mobile);
+      }
+
+      &+ .pmpro_card_actions{
+        margin-top:3px;
+      }
+    }
+
+    .pmpro_card_actions{
+      border:none;
+      background-color: var(--color__post-item-wrap-background);
+      padding: 12px var(--layout_df-padding);
+      @include border-radius(7px);
+      
+      @media(max-width:575px){
+        padding: 12px var(--layout_df-padding-mobile);
+      }
+    }
+
+    .pmpro_table{
+      background-color:transparent;
+      thead th,
+      tbody th, 
+      tbody td, 
+      tfoot td{
+        background-color:transparent;
+      }
+
+      tbody tr > *, 
+      thead tr > *, 
+      tfoot tr > *{
+        padding: 13px 20px 12px 20px;
+        border: 1px solid var(--color__hr-background);
+      }
+    }
+
+    .pmpro_card_title{
+      color: var(--color__text-heading);
+      padding: var(--layout_df-padding);
+      @media(max-width:575px){
+        padding: var(--layout_df-padding-mobile);
+      }
+    }
+
+    .pmpro_section{
+      margin-top:0;
+      margin-bottom:40px;
+    }
+
+    .pmpro_heading-with-avatar{
+      padding-left:0;
+      padding-right:0;
+      &:first-child{
+        padding-top:0;
+      }
+    }
+       
+    .pmpro_font-large{
+      font-size: var(--font__h3-font-size-px);
+      font-size: var(--font__h3-font-size-rem);
+    }
+    .pmpro_font-x-large{
+      font-size: var(--font__h2-font-size-px);
+      font-size: var(--font__h2-font-size-rem);
+    }
+    
+  }
+
+  &.pmpro-checkout #pmpro_pricing_fields{
+    .pmpro_card_title{
+      padding-top:0;
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+
+  .pmpro_captcha{
+    margin: var(--pmpro--base--spacing--medium) 0;
+  }
+
+  .pmpro_form_input{
+    color: var(--color__input-text);
+    border: 1px solid var(--color__input-border);
+    background-color: var(--color__input-background);
+    padding: 8px 15px;
+    outline: none;
+    -webkit-appearance: none;
+
+    &:focus {
+      color: var(--color__input-text-focus);
+      border-color: var(--color__input-border-focus);
+      background-color: var(--color__input-background-focus);
+      @include prefixer(box-shadow, none, spec webkit);
+    }
+
+    @include font-family(
+      var(--font__field),
+      var(--font__field-weight),
+      var(--font__field-letter-spacing),
+      var(--font__field-text-transform),
+      var(--font__field-text-decoration),
+      var(--font__field-style),
+      var(--font__field-line-height),
+      var(--font__field-size-px),
+      var(--font__field-size-rem),
+    );
+    @include border-radius(3px);
+    @include transiton-builder(border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, width 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-size 0.3s ease-in-out, background-position 0.3s ease-in-out);
+  }
+
+  .pmpro_message{
+    padding: 10px var(--layout_df-padding);
+      @media(max-width:575px){
+        padding: 10px var(--layout_df-padding-mobile);
+      }
+  }
+
+  .pmpro_form_field-password-toggle button, 
+  .pmpro_form_field-password-toggle button:hover, 
+  .pmpro_form_field-password-toggle button:focus, 
+  .pmpro_form_field-password-toggle button:active{
+    color: var(--color__link);
+    font-size: var(--font__main-size-px);
+    font-size: var(--font__main-size-rem);
+    @include prefixer(box-shadow, none, spec webkit);
+    .pmpro_icon-eye svg{
+      stroke: var(--color__link);
+    }
+  }
+
+  .pmpro_btn[type="submit"]{
+    border: none;
+    background-image: none;
+    text-shadow: none;
+    vertical-align: top;
+    display: inline-block;
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    text-align: center;
+    text-decoration:none;
+
+    -webkit-tap-highlight-color: transparent;
+
+    background-color: var(--color__button-background);
+    color: var(--color__button-text);
+    border: 1px solid var(--color__button-border);
+
+    padding: 6px 25px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration:none;
+      background-color: var(--color__button-background-hover);
+      color: var(--color__button-text-hover);
+      border-color: var(--color__button-border-hover);
+    }
+
+    @include font-family(
+      var(--font__button),
+      var(--font__button-weight),
+      var(--font__button-letter-spacing),
+      var(--font__button-text-transform),
+      var(--font__button-text-decoration),
+      var(--font__button-style),
+      var(--font__button-line-height),
+      var(--font__button-size-px),
+      var(--font__button-size-rem)
+    );
+
+    @include border-radius(3px);
+    @include transiton-builder(color 0.3s, background-color 0.3s, border-color 0.3s, opacity 0.3s, visibility 0.3s, width 0.3s, box-shadow 0.3s);
+    @include prefixer(box-shadow, none, spec webkit);
+    @include prefixer(user-select, none, spec webkit);
+  }
+
+  .pmpro_asterisk abbr, 
+  .pmpro_asterisk abbr[title]{
+    color: var(--color__main);
+  }
+
+  .pmpro_btn-print{
+    color:var(--color__main);
+  }
+}
+/*Paid Membership Pro New Design*/

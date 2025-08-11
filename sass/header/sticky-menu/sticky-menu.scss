@@ -1,0 +1,95 @@
+@import "../../variables-site/variables-site";
+@import "../../mixins/mixins-master";
+
+.beeteam368-site-header{
+  .beeteam368-main-menu.sticky-menu{
+    width:auto;
+    z-index:-999999;
+    top:0;
+    left:0;
+    right:0;
+    position:fixed;
+    opacity:0;
+    visibility:hidden;
+    @include prefixer(transform, translateY(-100%), spec webkit);
+  }
+
+  &.beeteam368-h-rose{
+    .beeteam368-main-menu.sticky-menu{
+      .beeteam368-social-account{
+        @media(max-width: 991px){
+          display:none;
+        }
+      }
+    }
+  }
+}
+
+.beeteam368-sticky-menu{
+  .beeteam368-site-header{
+    .beeteam368-main-menu.sticky-menu{
+      z-index:19;
+      opacity:1;
+      visibility:visible;
+      @include prefixer(transform, translateY(0), spec webkit);
+      @include transiton-builder(transform 0.368s ease-in-out, opacity 0.368s ease-in-out, visibility 0.368s ease-in-out);
+    }
+  }
+
+  &.admin-bar{
+    .beeteam368-site-header{
+      .beeteam368-main-menu.sticky-menu{
+        top:32px;
+        @media(max-width: 782px) {
+          top:46px;
+        }
+        @media(max-width: 600px) {
+          top:0;
+        }
+      }
+    }
+  }
+
+  &.side-menu-mode {
+    @media(min-width: 576px) {
+      .beeteam368-site-header{
+        .beeteam368-main-menu.sticky-menu{
+          left: var(--width__side-menu-hide);
+        }
+      }
+    }
+
+    &.sidemenu-active {
+      @media(min-width: 1366px) {
+        .beeteam368-site-header{
+          .beeteam368-main-menu.sticky-menu{
+            left: var(--width__side-menu);
+          }
+        }
+      }
+    }
+
+    &.sidemenu-right{
+      @media(min-width: 576px) {
+        .beeteam368-site-header{
+          .beeteam368-main-menu.sticky-menu{
+            left: 0;
+            right: var(--width__side-menu-hide);
+          }
+        }
+      }
+
+      &.sidemenu-active {
+        @media(min-width: 1366px) {
+          .beeteam368-site-header{
+            .beeteam368-main-menu.sticky-menu{
+              left: 0;
+              right: var(--width__side-menu);
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

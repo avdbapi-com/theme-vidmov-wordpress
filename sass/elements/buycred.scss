@@ -1,0 +1,193 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.mycred-coupon-form,
+.myCRED-buy-form{
+  .form-group{
+    margin-bottom:25px;
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+  input,
+  select{
+    width:100%;
+    &+.form-group{
+      margin-top:25px;
+    }
+
+    &[type="submit"]{
+      width:auto;
+      margin-top:5px;
+      @media(max-width: 767px){
+        width:100%;
+      }
+    }
+  }
+
+  label{
+    margin-bottom:10px;
+    display:block;
+
+    @include font-family(
+      var(--font__heading),
+      var(--font__heading-weight),
+      var(--font__heading-letter-spacing),
+      var(--font__heading-text-transform),
+      var(--font__heading-text-decoration),
+      var(--font__heading-style),
+      var(--font__heading-line-height),
+      var(--font__heading-size-px),
+      var(--font__heading-size-rem)
+    );
+
+    font-size: var(--font__h5-font-size-px);
+    font-size: var(--font__h5-font-size-rem);
+  }
+
+  .alert{
+    margin-bottom:15px;
+    color: var(--color__main);
+  }
+
+  select[name="mycred_buy"]{
+    option[value="stripe"]{
+      display:none !important;
+    }
+  }
+}
+
+body #buycred-checkout-page,
+body #buycred-checkout-wrapper.open #checkout-box{
+  table tr th{
+    font-size: var(--font__main-size-px);
+    font-size: var(--font__main-size-rem);
+  }
+
+  table tr td{
+    font-size: var(--font__main-size-px);
+    font-size: var(--font__main-size-rem);
+  }
+
+  table tr .item{
+    width:65%;
+  }
+
+  table tr .cost{
+    width:35%;
+  }
+
+  p{
+    font-size: var(--font__main-size-px);
+    font-size: var(--font__main-size-rem);
+    line-height:var(--font__main-line-height);
+  }
+
+  h2.gateway-title{
+    margin-top:0;
+    margin-bottom:30px;
+  }
+
+  .cancel{
+    text-transform:capitalize;
+    font-size: var(--font__main-size-12-px);
+    font-size: var(--font__main-size-12-rem);
+    margin-bottom:30px;
+  }
+
+  .checkout-footer{
+    text-align:center;
+    padding:0;
+  }
+
+  >.checkout-footer{
+    margin-top:30px;
+  }
+
+  .warning{
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--color__main);
+  }
+
+  img{
+    display:block;
+    margin:0 auto 35px auto;
+  }
+
+  .text-mutted{
+    margin-bottom:10px;
+    font-size: var(--font__main-size-px);
+    font-size: var(--font__main-size-rem);
+    color:var(--color__text-heading);
+  }
+}
+
+body #buycred-checkout-page{
+  min-height:0;
+  margin: 60px auto;
+  max-width: 688px;
+  &:last-child{
+    margin-bottom:0;
+  }
+
+  padding: var(--layout_df-padding);
+  background-color: var(--color__post-item-wrap-background);
+
+  @include border-radius(7px);
+  @include prefixer(box-shadow, 0px 0px 28px 0px var(--color__global-box-content-shadow), spec webkit);
+
+  @media(max-width: 991px){
+    width: calc(100% - var(--grid_gutter_md));
+    max-width: calc(720px - var(--grid_gutter_md));
+  }
+
+  @media(max-width: 767px){
+    width: calc(100% - var(--grid_gutter_sm));
+    max-width: calc(540px - var(--grid_gutter_sm));
+  }
+
+  @media(max-width: 575px){
+    padding: var(--layout_df-padding-mobile);
+  }
+}
+
+.beeteam368-mycred-buy-pending{
+  table{
+    margin-bottom:0;
+  }
+}
+
+.mycred-login-notice{
+  margin-bottom:25px;
+}
+
+.beeteam368-stripe-btn{
+  margin-right:5px;
+  &:last-child{
+    margin-right:0;
+  }
+}
+
+.mycred_buy_form_stripe{
+  label[for="card-element"]{
+    display:block;
+    margin-bottom:15px;
+  }
+}
+
+.buycred-stripe-form{
+  .mycred-stripe-subscribe-button, .mycred-stripe-buy-button{
+    margin:5px 5px 5px 0;
+  }
+}
+
+.buycred-woo-form{
+  .woocommerce{
+    margin-top:40px;
+
+    ul.products li.product, .woocommerce ul.products[class*="columns-"] li.product{
+      border:1px solid var(--color__hr-background);
+    }
+  }
+}

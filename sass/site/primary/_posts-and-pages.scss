@@ -1,0 +1,563 @@
+:root{
+  --color__single-author-avatar-border: #{$color__main};
+}
+
+[class*="-blank-page-template"],
+[class*="-elementor_canvas"],
+[class*="-elementor_header_footer"],
+[class*="-redux-templates_contained"],
+[class*="-redux-templates_full_width"],
+[class*="-redux-templates_canvas"]{
+  .single-page-title{
+    display:none;
+  }
+}
+
+.page-template-blank-page-template-with-sidebar{
+  .global-post-page-content{
+    > *{
+      padding:0;
+      background-color:transparent;
+      @include border-radius(0);
+      @include prefixer(box-shadow, none, spec webkit);
+    }
+  }
+}
+
+.global-post-page-content{
+
+  > *{
+    margin-bottom:40px;
+    &:last-child{
+      margin-bottom:0;
+    }
+
+    padding: var(--layout_df-padding);
+    background-color: var(--color__post-item-wrap-background);
+
+    @include border-radius(7px);
+    @include prefixer(box-shadow, 0px 0px 28px 0px var(--color__global-box-content-shadow), spec webkit);
+
+    @media(max-width: 575px){
+      padding: var(--layout_df-padding-mobile);
+    }
+  }
+
+  .in-trending-noti{
+    margin-bottom:37px;
+  }
+  .is-trending-page{
+    padding:0;
+    background-color:transparent;
+    @include border-radius(0);
+    @include prefixer(box-shadow, none, spec webkit);
+  }
+
+  .entry-content-in-single {
+    &:not(:last-child){
+      padding-bottom:30px;
+      margin-bottom:30px;
+      border-bottom:1px solid var(--color__hr-background);
+    }
+
+    &:empty{
+      padding:0;
+    }
+  }
+
+  .original-content-single,
+  .entry-content-in-single{
+    &> p,
+    &>blockquote{
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul, ol {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &~ hr{
+      &:last-child {
+        display: none;
+      }
+    }
+
+    .wp-block-button + .wp-block-button{
+      margin-top:20px;
+    }
+
+    .has-drop-cap:not(:focus):first-letter {
+      float: left;
+      font-size: 4.6em;
+      line-height: 0.68;
+      margin: 0.05em .1em 0 0;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:after{
+        content:'';
+        display:table;
+        clear:both;
+      }
+    }
+  }
+
+}
+
+.author-header-element{
+  .beeteam368-single-author{
+    margin-top:40px;
+    padding: var(--layout_df-padding);
+    background-color: var(--color__post-item-wrap-background);
+
+    @include border-radius(7px);
+    @include prefixer(box-shadow, 0px 0px 28px 0px var(--color__global-box-content-shadow), spec webkit);
+
+    @media(max-width: 575px){
+      padding: var(--layout_df-padding-mobile);
+    }
+  }
+}
+
+.single-page-title,
+.single-post-title{
+  .entry-title{
+    margin-bottom:0;
+  }
+  &:not(:last-child){
+    margin-bottom:1.3em;
+  }
+}
+
+.single-post-title,
+.top-post-meta{
+  &+ .beeteam368-single-author{
+    border-top:1px solid var(--color__hr-background);
+    padding-top:30px;
+    margin-top:30px;
+  }
+
+  &+ .entry-content-in-single{
+    border-top:1px solid var(--color__hr-background);
+    padding-top:30px;
+    margin-top:30px;
+  }
+}
+
+.post-description-title{
+  &:not(:last-child){
+    margin-bottom:1em;
+  }
+  &:last-child{
+    display:none;
+  }
+}
+
+.beeteam368-single-author{
+  width:100%;
+  margin-bottom:30px;
+
+  > *{
+    margin-right:5px;
+    &:last-child{
+      margin-right:0;
+    }
+  }
+
+  &:last-child{
+    margin-bottom:0;
+  }
+
+  .author-wrapper{
+    flex:1;
+  }
+
+  .author-avatar-wrap{
+    padding:2px;
+    overflow:hidden;
+    width:69px;
+    height:69px;
+    @include border-radius(50%);
+    border:2px solid var(--color__single-author-avatar-border);
+  }
+
+  .author-avatar{
+    display:block;
+    @include border-radius(50%);
+  }
+
+  .author-avatar-name{
+    margin-bottom:0;
+  }
+
+  .author-avatar-name-wrap{
+    width: auto;
+    max-width: calc(100% - 86px);
+  }
+
+  @media(max-width: 767px){
+    .author-wrapper{
+      flex: auto;
+      width:100%;
+      &:not(:last-child){
+        margin-bottom:20px;
+      }
+    }
+  }
+
+  .author-description{
+    max-width:66%;
+    text-align:right;
+    @media(max-width: 1279px){
+      max-width:50%;
+    }
+    @media(max-width: 767px){
+      max-width:100%;
+      text-align:left;
+    }
+  }
+
+  &.mobile-center{
+    @media(max-width: 767px) {
+      @include flexRowCenter;
+      .author-wrapper{
+        margin-right:0;
+        @include flexRowCenter;
+      }
+      .author-description{
+        text-align:center;
+      }
+    }
+  }
+}
+
+.beeteam368-player{
+  & ~ div {
+    padding: var(--layout_df-padding);
+    background-color: var(--color__post-item-wrap-background);
+
+    &:not(:last-child){
+      border-bottom:1px solid var(--color__hr-background);
+    }
+
+    @media(max-width: 575px){
+      padding: var(--layout_df-padding-mobile);
+    }
+
+    > *{
+      margin-right:8px;
+      &:last-child{
+        margin-right:0;
+      }
+    }
+
+    .single-post-title:not(:last-child){
+      margin-bottom:1.6em;
+    }
+
+    h1.entry-title{
+      margin-bottom:0.7em;
+      &:last-child{
+        margin-bottom:0;
+      }
+    }
+
+    .main-block-wrapper{
+      flex:1;
+      margin-right:30px;
+    }
+
+    @media(max-width: 991px){
+
+      &.beeteam368-single-meta{
+        @include flexRowCenter;
+        .main-block-wrapper{
+          flex:auto;
+          width:100%;
+          margin-right:0;
+
+          &:not(:last-child){
+            margin-bottom:20px;
+          }
+
+          @include flexRowCenter;
+          > * {
+            @include flexRowCenter;
+          }
+
+          > .single-post-title{
+            text-align:center;
+          }
+
+        }
+      }
+    }
+  }
+
+  & ~ .beeteam368-single-author{
+    @media(max-width: 767px) {
+      @include flexRowCenter;
+      .author-wrapper{
+        margin-right:0;
+        @include flexRowCenter;
+      }
+    }
+  }
+}
+
+.beeteam368-social-share-in-single{
+  .heateor_sss_sharing_container{
+    width:100%;
+  }
+
+  div.heateor_sss_follow_ul,
+  div.heateor_sss_sharing_ul{
+    margin:-6px !important;
+    @media(max-width: 767px){
+      @include flexRowControl;
+      @include flexRowCenter;
+    }
+
+    &:after{
+      content:'';
+      display: table;
+      clear:both;
+    }
+
+    a{
+      margin:6px !important;
+    }
+  }
+
+  .single-share-url{
+    width:688px;
+    max-width:100%;
+    margin-top:30px;
+    text-align:center;
+    margin-bottom:10px;
+  }
+}
+
+.post-tags-title{
+  margin-bottom: 0.8em;
+}
+
+.beeteam368-tags-in-single{
+  margin-left:-5px;
+  margin-right:-5px;
+
+  .tag-item{
+    display:block;
+    padding:2px 15px;
+    text-decoration:none;
+    margin:5px;
+    color: var(--color__icon);
+    background-color: var(--color__icon-background);
+    @include border-radius(3px);
+
+    &:active,
+    &:visited{
+      color: var(--color__icon);
+      background-color: var(--color__icon-background);
+    }
+
+    &:hover,
+    &:focus{
+      text-decoration:none;
+      outline: none;
+      color: var(--color__icon-hover);
+      background-color: var(--color__icon-background-hover);
+    }
+  }
+}
+
+article[id^="post-"] .beeteam368-social-share-in-single,
+.beeteam368-tags-in-single{
+  margin-bottom: 30px;
+  padding-bottom: 2.1em;
+  border-bottom: 1px solid var(--color__hr-background);
+
+  &:last-child{
+    margin-bottom:0;
+    padding-bottom:0;
+    border-bottom:none;
+  }
+}
+
+.beeteam368-social-share-after-player{
+
+  div.heateor_sss_follow_ul,
+  div.heateor_sss_sharing_ul{
+    margin-top:4px !important;
+    @include flexRowControl;
+    @include flexRowCenter;
+  }
+
+  &:not(.active-item){
+    opacity:0;
+    visibility:hidden;
+    max-height:0;
+    padding:0;
+    overflow:hidden;
+    border:none !important;
+    @include transiton-builder(opacity 0.368s ease-in-out, visibility 0.368s ease-in-out, max-height 0.368s 0.2s ease-in-out, padding 0.368s 0.2s ease-in-out);
+  }
+  &.active-item{
+    max-height:300px;
+    @include transiton-builder(opacity 0.368s 0.26s ease-in-out, visibility 0.368s 0.26s ease-in-out, max-height 0.368s ease-in-out, padding 0.368s ease-in-out);
+  }
+}
+
+.nav-post-in-single{
+  width:50%;
+
+  .post-title{
+    width:100%;
+  }
+
+  .nav-post-thumb{
+    width:69px;
+    height:69px;
+
+    &:empty{
+      display:none;
+    }
+
+    &:not(:empty) + .post-title{
+      width:calc(100% - 86px);
+    }
+  }
+
+  .prev-next-title{
+    width:100%;
+    margin-bottom:20px;
+    text-decoration:none;
+  }
+
+  &.nav-post-prev{
+    padding-right:10px;
+
+    .prev-next-title{
+      span{
+        margin:0 0 0 15px;
+      }
+    }
+
+    .nav-post-thumb{
+      margin-right:15px;
+    }
+  }
+
+  &.nav-post-next{
+    padding-left:10px;
+    text-align:right;
+
+    .prev-next-title{
+      span{
+        margin:0 15px 0 0;
+      }
+      @include flexRowEnd;
+    }
+
+    .nav-post-thumb{
+      margin-left:15px;
+      order:2;
+    }
+  }
+
+  @media(max-width: 767px){
+    width:100%;
+    &.nav-post-prev,
+    &.nav-post-next{
+      padding-right:0;
+      padding-left:0;
+    }
+    &.nav-post-prev{
+      &:not(:last-child){
+        padding-bottom:25px;
+        margin-bottom:20px;
+        border-bottom:1px solid var(--color__hr-background);
+      }
+    }
+  }
+}
+
+.beeteam368-related-posts{
+  padding:0;
+  background-color:transparent;
+  @include border-radius(0);
+  @include prefixer(box-shadow, none, spec webkit);
+
+  &:not(:first-child){
+    padding-top:15px;
+  }
+
+  &:not(:last-child){
+    padding-bottom:20px;
+  }
+}
+
+.collapse-content{
+  max-height:168px;
+  overflow-y:hidden;
+  border-bottom:none !important;
+}
+
+.show-more-content{
+  &:not(:last-child){
+    margin-bottom:40px;
+  }
+}
+
+.single-featured-image{
+  margin-bottom:40px;
+
+  img{
+    display:block;
+    margin:0 auto;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction{
+    bottom:15px;
+  }
+
+  .swiper-pagination-bullet{
+    background:#FFFFFF;
+    opacity:0.68;
+  }
+
+  .swiper-pagination-bullet-active{
+    opacity:1;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev{
+    color:#FFFFFF;
+    &:after{
+      font-size:30px;
+    }
+  }
+}
+
+.page-links{
+  clear: both;
+  margin-top: 1.5em;
+}
+
+.beeteam368-live-event-info{
+  display:none;
+}
+
+.single-sub-title{
+    opacity:0.5;
+}

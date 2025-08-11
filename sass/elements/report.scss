@@ -1,0 +1,36 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.beeteam368-report-popup{
+  text-align:left;
+
+  .report-item{
+    margin-bottom: 25px;
+    &:last-child{
+      margin-bottom:0;
+    }
+    input{
+      margin-right:20px;
+    }
+  }
+
+  .report-alerts{
+    margin-bottom:25px;
+    &:empty{
+      display:none;
+    }
+    span{
+      display:block;
+      background-color:#DC3545;
+      color:#FFFFFF;
+      padding:8px var(--layout_df-padding);
+      @media(max-width: 575px){
+        padding:1px var(--layout_df-padding-mobile);
+      }
+    }
+
+    span.success{
+      background-color:#198754;
+    }
+  }
+}

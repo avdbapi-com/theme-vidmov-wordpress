@@ -1,0 +1,188 @@
+:root {
+  --color__blockquote-background: #FFFFFF;
+  --color__blockquote-border: #D8DADF;
+  --color__blockquote-icon: #D8DADF;
+  --color__blockquote-cite: #{$color__main};
+}
+p {
+  margin-top: 1.2em;
+  margin-bottom: 1.2em;
+}
+
+dfn, cite, em, i {
+  font-style: italic;
+}
+
+blockquote {
+  position:relative;
+  margin: 2.1em 0 2.1em 0;
+  padding:30px 20px 30px 100px;
+  min-height:112px;
+  text-align:left;
+  background-color: var(--color__blockquote-background);
+  border:1px solid var(--color__blockquote-border);
+  @include border-radius(8px);
+  @include prefixer(box-shadow, 0px 0 15px 0 var(--color__global-box-shadow), spec webkit);
+
+  &:before{
+    content:'\f10d';
+    font-family: "Font Awesome 5 Free";
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    font-weight: 900;
+    display:block;
+    position:absolute;
+    font-size:48px;
+    left:30px;
+    top:30px;
+    color: var(--color__blockquote-icon);
+  }
+
+  cite{
+    color:var(--color__blockquote-cite);
+    font-size: var(--font__main-size-14-px);
+    font-size: var(--font__main-size-14-rem);
+
+    > br:first-child{
+      display:none;
+    }
+  }
+
+  &.wp-block-quote.is-large,
+  &.wp-block-quote.is-style-large{
+    margin: 2.1em 0;
+    padding:30px 20px 30px 100px;
+    p{
+      font-size: var(--font__main-size-20-px);
+      font-size: var(--font__main-size-20-rem);
+    }
+    cite{
+      color:var(--color__blockquote-cite);
+      font-size: var(--font__main-size-14-px);
+      font-size: var(--font__main-size-14-rem);
+    }
+  }
+
+  p{
+    &:first-child{
+      margin-top:0;
+    }
+
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+
+  &.has-text-align-right{
+    padding:30px 100px 30px 20px;
+    &:before{
+      content:'\f10e';
+      left:auto;
+      right:30px;
+    }
+  }
+
+  @media(max-width: 767px){
+    padding:20px 20px 20px 65px;
+    min-height:73px;
+    &:before{
+      font-size:30px;
+      left:20px;
+      top:20px;
+    }
+
+    &.wp-block-quote.is-large,
+    &.wp-block-quote.is-style-large{
+      padding:20px 20px 20px 65px;
+      p{
+        font-size: var(--font__main-size-16-px);
+        font-size: var(--font__main-size-16-rem);
+      }
+    }
+
+    &.has-text-align-right{
+      padding:20px 65px 20px 20px;
+      &:before{
+        content:'\f10e';
+        left:auto;
+        right:20px;
+      }
+    }
+  }
+}
+
+.wp-block-pullquote{
+  padding:0;
+  margin: 2.1em 0 2.1em 0;
+  &.has-background{
+    padding:2.1em;
+    @media(max-width: 767px){
+      padding:20px;
+    }
+  }
+  blockquote{
+    margin: 0;
+  }
+
+  p{
+    @extend .font-main;
+  }
+
+  &.is-style-solid-color blockquote p{
+    font-size: var(--font__main-size-20-px);
+    font-size: var(--font__main-size-20-rem);
+    @media(max-width: 767px){
+      font-size: var(--font__main-size-16-px);
+      font-size: var(--font__main-size-16-rem);
+    }
+  }
+
+  cite{
+    color:var(--color__blockquote-cite);
+    font-size: var(--font__main-size-14-px);
+    font-size: var(--font__main-size-14-rem);
+  }
+
+  &.is-style-solid-color{
+    blockquote{
+      width:100%;
+      max-width:100%;
+    }
+  }
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: var(--color__background-pre);
+  font-family: var(--font__pre);
+  margin: 2.1em 0;
+  max-width: 100%;
+  overflow: auto;
+  padding: 20px;
+}
+
+code, kbd, tt, var {
+  font-family: var(--font__code);
+}
+
+abbr, acronym {
+  border-bottom: 1px dotted var(--color__abbr-border);
+  cursor: help;
+}
+
+mark, ins {
+  background-color: var(--color__ins-background);
+  text-decoration: none;
+  padding:1px 5px 2px 5px;
+}
+
+big {
+  font-size: 125%;
+}

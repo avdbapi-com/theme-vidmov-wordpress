@@ -1,0 +1,47 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.is-single-post-main-player{
+  .beeteam368-player-protect{
+    color: var(--color__text-main);
+    .player-banner{
+      cursor:auto;
+      &:before{
+        background:rgba(1,0,1,0.68);
+      }
+    }
+  }
+
+  .post-sales-count .item-text{
+    display:inline;
+  }
+}
+
+.sell-descriptions{
+  margin-bottom:22px;
+}
+
+.mycred-sell-this-wrapper{
+  width:100%;
+  position:relative;
+  text-align:center;
+  padding: var(--layout_df-padding);
+  @media(max-width: 575px){
+    padding: var(--layout_df-padding-mobile);
+  }
+
+  a.btnn-default,
+  button{
+    margin:4px;
+    @media(max-width: 575px){
+      padding-left:15px;
+      padding-right:15px;
+    }
+  }
+}
+
+.entry-content{
+  .mycred-sell-this-wrapper{
+    border: 2px dashed var(--color__no-images-border);
+  }
+}

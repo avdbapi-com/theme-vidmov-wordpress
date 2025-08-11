@@ -1,0 +1,96 @@
+@import "../variables-site/variables-site";
+@import "../mixins/mixins-master";
+
+.beeteam368-playlist-add-popup{
+  text-align:left;
+
+  .beeteam368-playlist-add-wrapper{
+    max-height:calc(100vh - 290px);
+    padding-right:40px;
+    margin-right:-40px;
+
+    @media(max-width: 575px){
+      padding-right: var(--layout_df-padding-mobile);
+      margin-right: calc(-1 * var(--layout_df-padding-mobile));
+    }
+  }
+
+  .playlist-add-wrapper{
+    display:none;
+
+    &.active-item{
+      display:block;
+    }
+
+    .data-item{
+      margin-bottom:25px;
+      &:last-child{
+        margin-bottom:0;
+      }
+    }
+    label{
+      display:block;
+      margin-bottom:15px;
+    }
+    input[type="text"],
+    select{
+      width:100%;
+    }
+  }
+
+  .playlist-item{
+    cursor:pointer;
+    margin-bottom:15px;
+    position:relative;
+    &:last-child{
+      margin-bottom:0;
+    }
+    .beeteam368-icon-item{
+      margin-right:20px;
+    }
+    .playlist-title{
+      width:calc(100% - 60px);
+    }
+
+    &.active-loading{
+      opacity:0.5;
+      pointer-events:none !important;
+    }
+
+    .playlist-status{
+      opacity:0.68;
+      position:absolute;
+      right:0;
+      top:50%;
+      @include prefixer(transform, translateY(-50%), spec webkit ms);
+    }
+  }
+
+  .open-add-playlist{
+    cursor:pointer;
+    .beeteam368-icon-item{
+      margin-right:20px;
+    }
+  }
+
+  .playlist-alerts{
+    margin-bottom:30px;
+    @include border-radius(3px);
+    &:empty{
+      display:none;
+    }
+    span{
+      display:block;
+      background-color:#DC3545;
+      color:#FFFFFF;
+      padding:8px var(--layout_df-padding);
+      @media(max-width: 575px){
+        padding:1px var(--layout_df-padding-mobile);
+      }
+    }
+
+    span.success{
+      background-color:#198754;
+    }
+  }
+}

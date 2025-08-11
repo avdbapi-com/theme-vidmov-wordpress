@@ -1,0 +1,303 @@
+@import "../../../variables-site/variables-site";
+@import "../../../mixins/mixins-master";
+
+:root{
+  --color__prev-next-slider: #1c1c1e;
+  --color__prev-next-slider-background: #d8dadf;
+  --color__prev-next-slider-boder: #d8dadf;
+
+  --color__prev-next-slider-hover: #FFFFFF;
+  --color__prev-next-slider-background-hover: #{$color__main};
+  --color__prev-next-slider-boder-hover: #{$color__main};
+
+  --color__slider-pagination: #D8DADF;
+  --color__slider-pagination-active: #{$color__main};
+}
+
+.swiper{
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper-slide{
+  flex-shrink: 0;
+}
+
+.beeteam368-slider-container{
+
+  &.container-silder-style-lily,
+  &.container-silder-style-rose,
+  &.container-silder-style-orchid,
+  &.container-silder-style-alyssa{
+    padding-bottom:66px;
+  }
+
+  .slider-button-next,
+  .slider-button-prev{
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:36px;
+    height:36px;
+    z-index:1;
+    text-align:center;
+    font-size:15px;
+    line-height:32px;
+    cursor:pointer;
+
+    color: var(--color__prev-next-slider);
+    background-color: var(--color__prev-next-slider-background);
+    border:2px solid var(--color__prev-next-slider-boder);
+
+    @include transiton-builder(all 0.3s);
+    @include border-radius(8px);
+
+    &:hover{
+      background-color: var(--color__prev-next-slider-background-hover);
+      border-color: var(--color__prev-next-slider-boder-hover);
+      color: var(--color__prev-next-slider-hover);
+    }
+
+    &:focus{
+      outline:none;
+    }
+
+    &.swiper-button-disabled{
+      cursor:no-drop;
+    }
+  }
+
+  .slider-button-next{
+    margin-left:42px;
+  }
+
+  .swiper-pagination:empty{
+    opacity:0;
+    pointer-events:none;
+  }
+
+  .swiper-pagination.swiper-pagination-bullets{
+    height:30px;
+    line-height:30px;
+    position: absolute;
+    z-index:2;
+    right:0;
+    bottom:4px;
+    left:108px;
+    width:auto;
+    text-align:left;
+    @include transiton-builder(opacity 0s 0.5s);
+
+    .swiper-pagination-bullet{
+      opacity: 1;
+      margin: 0 6px 0 0;
+      background-color: var(--color__slider-pagination);
+      @include transiton-builder(width 0s, background-color 0.3s);
+      @include prefixer(transform, translate3d(0,0,0), spec webkit);
+      @include border-radius(0);
+      &:last-child{
+        margin-right:0;
+      }
+    }
+
+    .swiper-pagination-bullet-active{
+      width:16px;
+      background-color: var(--color__slider-pagination-active);
+    }
+  }
+
+  .swiper-pagination.swiper-pagination-progressbar{
+    width:auto;
+    left:108px;
+    right:0;
+    top:auto;
+    bottom:17px;
+    height:2px;
+
+    background-color: var(--color__slider-pagination);
+
+    .swiper-pagination-progressbar-fill{
+      background-color: var(--color__slider-pagination-active);
+    }
+  }
+
+  //*Lily & Alyssa layout
+  .global-slider-wrapper{
+    &.blog-style-lily,
+    &.blog-style-alyssa{
+
+      width:auto;
+      margin:0;
+
+      @media (min-width: 768px) {
+        margin-right: calc(var(--grid_gutter_md) * -1);
+      }
+
+      @media (min-width: 992px) {
+        margin-right: calc(var(--grid_gutter_lg) * -1);
+      }
+
+      @media (min-width: 1200px) {
+        margin-right: calc(var(--grid_gutter_xl) * -1);
+      }
+
+      .swiper-slide{
+        height:auto;
+        @include flexRowControl;
+
+        padding:0;
+
+        width:100%;
+        margin-right: 0;
+
+        @media (min-width: 768px) {
+          width: calc(50% - var(--grid_gutter_md));
+          margin-right: var(--grid_gutter_md);
+        }
+
+        @media (min-width: 992px) {
+          width: calc(33.33333333% - var(--grid_gutter_lg));
+          margin-right: var(--grid_gutter_lg);
+        }
+
+        @media (min-width: 1200px) {
+          width: calc(33.33333333% - var(--grid_gutter_xl));
+          margin-right: var(--grid_gutter_xl);
+        }
+
+        .post-item {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+
+          .blog-img-link {
+            display: block;
+          }
+        }
+
+      }
+    }
+
+    &.is-fw-mode{
+      &.blog-style-lily,
+      &.blog-style-alyssa{
+
+        @media (min-width: 1670px) {
+          margin-right: calc(var(--grid_gutter_xxl) * -1);
+        }
+
+        @media (min-width: 2200px) {
+          margin-right: calc(var(--grid_gutter_xxl) * -1);
+        }
+
+        .swiper-slide{
+          @media(min-width: 1670px){
+            width: calc(25% - var(--grid_gutter_xxl));
+            margin-right: var(--grid_gutter_xxl);
+          }
+
+          @media(min-width: 2200px){
+            width: calc(20% - var(--grid_gutter_xxl));
+            margin-right: var(--grid_gutter_xxl);
+          }
+
+        }
+      }
+
+    }
+  }
+  //*Lily & Alyssa layout
+
+  //*Rose & Orchid layout
+  .global-slider-wrapper{
+    &.blog-style-rose,
+    &.blog-style-orchid{
+
+      width:auto;
+      margin:0;
+
+      .swiper-slide {
+        height:auto;
+        @include flexRowControl;
+
+        padding:0;
+
+        margin-right: 10px;
+
+        @media (min-width: 576px) {
+          margin-right: var(--grid_gutter_sm);
+        }
+
+        @media (min-width: 768px) {
+          margin-right: var(--grid_gutter_md);
+        }
+
+        @media (min-width: 992px) {
+          margin-right: var(--grid_gutter_lg);
+        }
+
+        @media(min-width: 1200px){
+          margin-right:var(--grid_gutter_xl);
+        }
+
+        @media (min-width: 1280px) {
+          margin-right:var(--grid_gutter_xl);
+        }
+
+        @media(min-width: 1366px){
+          margin-right:var(--grid_gutter_xxl);
+        }
+
+        &:last-child{
+          margin-right:0;
+        }
+
+        width:220px;
+
+        @media(min-width: 1366px){
+          width:200px;
+        }
+
+        @media(min-width: 1670px){
+          width:210px;
+        }
+
+        @media(min-width: 1792px){
+          width:225px;
+        }
+
+        @media(min-width: 1800px){
+          width:235px;
+        }
+
+        @media(min-width: 1910px){
+          width:210px;
+        }
+
+        @media(min-width: 2038px){
+          width:220px;
+        }
+
+        @media(min-width: 2200px){
+          width:235px;
+        }
+
+        &:last-child{
+          margin:0;
+        }
+
+        .post-item {
+          width: 100%;
+          padding: 0;
+          margin: 0;
+
+          .blog-img-link {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  //*Rose & Orchid layout
+}

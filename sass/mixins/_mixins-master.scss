@@ -1,0 +1,380 @@
+@function pow ($value, $pow: 1) {
+  @return if($pow == 0, 1, $value * pow($value, $pow - 1));
+}
+
+@function rounded ($value, $precision: 1) {
+  $pow10: pow(10, $precision);
+  @return round($value * $pow10) / $pow10;
+}
+
+@function font-size-px($sizeValue: 1) {
+  @return (round($sizeValue * 16)) * 1px;
+}
+
+@function font-size-rem($sizeValue: 1) {
+  @return rounded($sizeValue * 1rem, 2);
+}
+
+@function url-friendly-colour($colour) {
+  @return '%23' + str-slice('#{$colour}', 2, -1);
+}
+
+@mixin font-size($sizeValue: 1) {
+  font-size: (round($sizeValue * 16)) * 1px;
+  font-size: rounded($sizeValue * 1rem, 2);
+}
+
+@mixin font-family($family: ('Play', sans-serif), $weight: 400, $letter-spacing: 0, $text-transform: none, $text-decoration: none, $style: normal, $line-height: 1.68, $size-px: 16px, $size-rem: 1rem) {
+  font-family: $family;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing;
+  text-transform: $text-transform;
+  text-decoration: $text-decoration;
+  font-style: $style;
+  line-height: $line-height;
+  font-size: $size-px;
+  font-size: $size-rem;
+}
+
+@mixin containerSettings {
+  padding-right: calc(var(--grid_gutter_df) / 2);
+  padding-left: calc(var(--grid_gutter_df) / 2);
+
+  @media (min-width: 576px) {
+    padding-right: calc(var(--grid_gutter_sm) / 2);
+    padding-left: calc(var(--grid_gutter_sm) / 2);
+    width: 540px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    padding-right: calc(var(--grid_gutter_md) / 2);
+    padding-left: calc(var(--grid_gutter_md) / 2);
+    width: 720px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 992px) {
+    padding-right: calc(var(--grid_gutter_lg) / 2);
+    padding-left: calc(var(--grid_gutter_lg) / 2);
+    width: 960px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    padding-right: calc(var(--grid_gutter_xl) / 2);
+    padding-left: calc(var(--grid_gutter_xl) / 2);
+    width: 1120px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: calc(var(--grid_gutter_xl) / 2);
+    padding-left: calc(var(--grid_gutter_xl) / 2);
+    width: 1200px;
+    max-width: 100%;
+  }
+
+  @media (min-width: 1366px) {
+    padding-right: calc(var(--grid_gutter_xxl) / 2);
+    padding-left: calc(var(--grid_gutter_xxl) / 2);
+    width: 1290px;
+    max-width: 100%;
+  }
+}
+
+@mixin rowSettings {
+  margin-right: (calc(-1 * var(--grid_gutter_df) / 2));
+  margin-left: (calc(-1 * var(--grid_gutter_df) / 2));
+
+  @media (min-width: 576px) {
+    margin-right: (calc(-1 * var(--grid_gutter_sm) / 2));
+    margin-left: (calc(-1 * var(--grid_gutter_sm) / 2));
+  }
+
+  @media (min-width: 768px) {
+    margin-right: (calc(-1 * var(--grid_gutter_md) / 2));
+    margin-left: (calc(-1 * var(--grid_gutter_md) / 2));
+  }
+
+  @media (min-width: 992px) {
+    margin-right: (calc(-1 * var(--grid_gutter_lg) / 2));
+    margin-left: (calc(-1 * var(--grid_gutter_lg) / 2));
+  }
+
+  @media (min-width: 1200px) {
+    margin-right: (calc(-1 * var(--grid_gutter_xl) / 2));
+    margin-left: (calc(-1 * var(--grid_gutter_xl) / 2));
+  }
+
+  @media (min-width: 1280px) {
+    margin-right: (calc(-1 * var(--grid_gutter_xl) / 2));
+    margin-left: (calc(-1 * var(--grid_gutter_xl) / 2));
+  }
+
+  @media (min-width: 1366px) {
+    margin-right: (calc(-1 * var(--grid_gutter_xxl) / 2));
+    margin-left: (calc(-1 * var(--grid_gutter_xxl) / 2));
+  }
+}
+
+@mixin colSettings {
+  padding-right: calc(var(--grid_gutter_df) / 2);
+  padding-left: calc(var(--grid_gutter_df) / 2);
+
+  @media (min-width: 576px) {
+    padding-right: calc(var(--grid_gutter_sm) / 2);
+    padding-left: calc(var(--grid_gutter_sm) / 2);
+  }
+
+  @media (min-width: 768px) {
+    padding-right: calc(var(--grid_gutter_md) / 2);
+    padding-left: calc(var(--grid_gutter_md) / 2);
+  }
+
+  @media (min-width: 992px) {
+    padding-right: calc(var(--grid_gutter_lg) / 2);
+    padding-left: calc(var(--grid_gutter_lg) / 2);
+  }
+
+  @media (min-width: 1200px) {
+    padding-right: calc(var(--grid_gutter_xl) / 2);
+    padding-left: calc(var(--grid_gutter_xl) / 2);
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: calc(var(--grid_gutter_xl) / 2);
+    padding-left: calc(var(--grid_gutter_xl) / 2);
+  }
+
+  @media (min-width: 1366px) {
+    padding-right: calc(var(--grid_gutter_xxl) / 2);
+    padding-left: calc(var(--grid_gutter_xxl) / 2);
+  }
+}
+
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin clearfix() {
+  content: "";
+  display: table;
+  table-layout: fixed;
+}
+
+@mixin clearfix-after() {
+  clear: both;
+}
+
+@mixin column-width($numberColumns: 3) {
+  width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
+}
+
+@mixin prefixer($property, $value, $prefixes:null) {
+  @if $prefixes == null {
+    $prefixes: spec webkit moz ms o;
+  }
+  @each $prefix in $prefixes {
+    @if $prefix == webkit {
+      -webkit-#{$property}: #{$value};
+    } @else if $prefix == moz {
+      -moz-#{$property}: #{$value};
+    } @else if $prefix == ms {
+      -ms-#{$property}: #{$value};
+    } @else if $prefix == o {
+      -o-#{$property}: #{$value};
+    } @else if $prefix == spec {
+      #{$property}: #{$value};
+    } @else {
+      @warn "Unrecognized prefix: #{$prefix}";
+    }
+  }
+}
+
+@mixin border-radius($top-left:null, $top-right:null, $bottom-left:null, $bottom-right:null) {
+  @if $top-left!=null and $top-right==null and $bottom-left==null and $bottom-right==null {
+    @include prefixer(border-radius, $top-left, spec webkit);
+  } @else {
+    @if $top-left!=null {
+      @include prefixer(border-top-left-radius, $top-left, spec webkit);
+    }
+    @if $top-right!=null {
+      @include prefixer(border-top-right-radius, $top-right, spec webkit);
+    }
+    @if $bottom-left!=null {
+      @include prefixer(border-bottom-left-radius, $bottom-left, spec webkit);
+    }
+    @if $bottom-right!=null {
+      @include prefixer(border-bottom-right-radius, $bottom-right, spec webkit);
+    }
+  }
+}
+
+@mixin transiton-builder($transitionValue...) {
+  @include prefixer(transition, $transitionValue, spec webkit);
+}
+
+@mixin resetTag {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  @include border-radius(0px);
+  outline: none;
+}
+
+@mixin flexNormalControl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flexRowControl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  @include prefixer(flex-wrap, wrap, spec webkit ms);
+}
+
+@mixin flexColumnControl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  @include prefixer(flex-wrap, wrap, spec webkit ms);
+
+}
+
+@mixin flexVerticalAlignMiddle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  align-content: center;
+
+  @include prefixer(flex-flow, row wrap, spec webkit);
+  @include prefixer(box-pack, center, spec webkit);
+  @include prefixer(box-align, center, webkit moz ms);
+  @include prefixer(align-items, center, spec webkit);
+
+}
+
+@mixin flexVerticalAlignTop {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  @include prefixer(flex-flow, row wrap, spec webkit);
+  @include prefixer(align-items, flex-start, spec webkit);
+}
+
+@mixin flexVerticalAlignBottom {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+
+  @include prefixer(flex-flow, row wrap, spec webkit);
+  @include prefixer(align-items, flex-end, spec webkit);
+}
+
+@mixin flexRowCenter {
+  -ms-flex-pack: center;
+  @include prefixer(justify-content, center, spec webkit);
+}
+
+@mixin flexRowSpaceBetween {
+  -ms-flex-pack: justify;
+  @include prefixer(justify-content, space-between, spec webkit);
+}
+
+@mixin flexRowEnd {
+  -ms-flex-pack: end;
+  @include prefixer(justify-content, flex-end, spec webkit);
+}
+
+@mixin customTranslate($shape, $tx, $ty) {
+  @if $shape == 1 {
+    transform: translate($tx, $ty);
+  } @else if $shape == 2 {
+    transform: translate(-$ty, $tx);
+  } @else if $shape == 3 {
+    transform: translate($ty, -$tx);
+  } @else if $shape == 4 {
+    transform: translate(-$tx, -$ty);
+  }
+}
+
+@mixin mobileMenuOpen($heightTopBar, $borderColor, $heightMenuMobile) {
+  .mobile-active {
+    @media(max-width: 991px) {
+      .beeteam368_color_bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+      }
+
+      .beeteam368-top-menu {
+        display: none;
+      }
+      .beeteam368-main-menu {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+        top: var(#{$heightTopBar});
+      }
+
+      .beeteam368-main-menu-row {
+        min-height: var(#{$heightMenuMobile});
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 10px;
+          right: 10px;
+          bottom: 0;
+          height: 2px;
+          background-color: var(#{$borderColor});
+        }
+      }
+
+      .beeteam368-main-nav {
+        max-height: 0;
+        min-height: 0;
+
+        > ul.menu-items-lyt {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          overflow: visible;
+          overflow-x: hidden;
+          overflow-y: auto;
+          padding-bottom: 120px;
+          @include prefixer(transform, scale(1, 1), spec webkit ms);
+          @include transiton-builder(opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out, height 0.3s ease-in);
+          margin: calc(var(#{$heightMenuMobile}) + var(#{$heightTopBar})) 0 0 0;
+          height: calc(100vh - var(#{$heightMenuMobile}) - var(#{$heightTopBar}));
+        }
+      }
+    }
+  }
+}

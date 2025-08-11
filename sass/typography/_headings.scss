@@ -1,0 +1,126 @@
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6, .h7 {
+  color: var(--color__text-heading);
+  word-break: break-word;
+  @include resetTag;
+  @include font-family(
+    var(--font__heading),
+    var(--font__heading-weight),
+    var(--font__heading-letter-spacing),
+    var(--font__heading-text-transform),
+    var(--font__heading-text-decoration),
+    var(--font__heading-style),
+    var(--font__heading-line-height),
+    var(--font__heading-size-px),
+    var(--font__heading-size-rem)
+  );
+
+  &.h-light {
+    font-weight: normal;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom:0.6em;
+}
+
+h1,
+.h1{
+  font-size: var(--font__h1-font-size-px);
+  font-size: var(--font__h1-font-size-rem);
+}
+.h1-mobile{
+  @media(max-width: 767px){
+    font-size: var(--font__h1-font-size-px);
+    font-size: var(--font__h1-font-size-rem);
+  }
+}
+
+.h1-single{
+  font-size: var(--font__h1-single-size-px);
+  font-size: var(--font__h1-single-size-rem);
+  @media(max-width: 1199px){
+    font-size: var(--font__h1-font-size-px);
+    font-size: var(--font__h1-font-size-rem);
+  }
+}
+
+h2,
+.h2 {
+  font-size: var(--font__h2-font-size-px);
+  font-size: var(--font__h2-font-size-rem);
+}
+.h2-mobile{
+  @media(max-width: 767px){
+    font-size: var(--font__h2-font-size-px);
+    font-size: var(--font__h2-font-size-rem);
+  }
+}
+
+h3,
+.h3 {
+  font-size: var(--font__h3-font-size-px);
+  font-size: var(--font__h3-font-size-rem);
+}
+.h3-mobile{
+  @media(max-width: 767px){
+    font-size: var(--font__h3-font-size-px);
+    font-size: var(--font__h3-font-size-rem);
+  }
+}
+
+h4,
+.h4 {
+  font-size: var(--font__h4-font-size-px);
+  font-size: var(--font__h4-font-size-rem);
+}
+.h4-mobile{
+  @media(max-width: 767px){
+    font-size: var(--font__h4-font-size-px);
+    font-size: var(--font__h4-font-size-rem);
+  }
+}
+
+h5,
+.h5 {
+  font-size: var(--font__h5-font-size-px);
+  font-size: var(--font__h5-font-size-rem);
+}
+.h5-mobile{
+  @media(max-width: 767px){
+    font-size: var(--font__h5-font-size-px);
+    font-size: var(--font__h5-font-size-rem);
+  }
+}
+
+h6,
+.h6 {
+  font-size: var(--font__h6-font-size-px);
+  font-size: var(--font__h6-font-size-rem);
+}
+.h6-mobile{
+  @media(max-width: 767px){
+    font-size: var(--font__h6-font-size-px);
+    font-size: var(--font__h6-font-size-rem);
+  }
+}
+
+.h7 {
+  font-size: var(--font__h7-font-size-px);
+  font-size: var(--font__h7-font-size-rem);
+}
+.h7-mobile{
+  @media(max-width: 767px){
+    font-size: var(--font__h7-font-size-px);
+    font-size: var(--font__h7-font-size-rem);
+  }
+}

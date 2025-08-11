@@ -1,0 +1,125 @@
+embed,
+iframe,
+object {
+  display:block;
+  max-width: 100%;
+}
+
+.whatever-embed-responsive{
+  margin-top:2.1em;
+  margin-bottom:2.1em;
+
+  &:first-child{
+    margin-top:0;
+  }
+
+  &:last-child{
+    margin-bottom:0;
+  }
+
+  iframe{
+    margin:0;
+  }
+
+  &.video-ratio-16-9{
+    position:relative;
+    padding-top:56.25%;
+    iframe{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    }
+  }
+
+  &.twitter-ratio{
+    .twitter-tweet{
+      margin-top:0 !important;;
+      margin-bottom:0 !important;
+    }
+    .twitter-timeline{
+      border:1px solid #CFD9DE !important;
+      @include border-radius(10px);
+    }
+  }
+}
+
+.wp-block-image{
+  margin: 2.1em 0 2.1em 0;
+
+  &:first-child{
+    margin-top:0;
+  }
+
+  &:last-child{
+    margin-bottom:0;
+  }
+
+  img{
+    display:block;
+  }
+}
+
+.wp-block-embed{
+  margin: 2.1em 0 2.1em 0;
+
+  &:first-child{
+    margin-top:0;
+  }
+
+  &:last-child{
+    margin-bottom:0;
+  }
+
+  iframe{
+    width:100%;
+    max-width:100%;
+  }
+
+  &.wp-block-embed-instagram{
+    .instagram-media,
+    .instagram-media-registered,
+    iframe{
+      width:100% !important;
+      max-width:100% !important;
+    }
+  }
+
+  &.wp-block-embed-youtube{
+    .wp-block-embed__wrapper{
+      padding-top:56.25%;
+      position:relative;
+      iframe{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+}
+
+iframe.wp-embedded-content{
+  margin: 2.1em 0 2.1em 0;
+  width:100% !important;
+
+  &:first-child{
+    margin-top:0;
+  }
+
+  &:last-child{
+    margin-bottom:0;
+  }
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+@import "captions";
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+@import "galleries";
